@@ -56,12 +56,25 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>DEBUG</Value>
+      <Value>HW_V1</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
+      <Value>../Device</Value>
+      <Value>../Device/ATTiny84A</Value>
+      <Value>../Drivers</Value>
+      <Value>../Drivers/Peripheral</Value>
+      <Value>../Drivers/Peripheral/EEPROM</Value>
+      <Value>../Drivers/Peripheral/PCIE</Value>
+      <Value>../Drivers/Peripheral/GPIO</Value>
+      <Value>../Drivers/Peripheral/ADC</Value>
+      <Value>../Drivers/Peripheral/I2C</Value>
+      <Value>../Drivers/BatteryMeasure</Value>
+      <Value>../Drivers/Magazine</Value>
+      <Value>../Drivers/FET</Value>
+      <Value>../Drivers/ShootingMode</Value>
+      <Value>../Application</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -82,10 +95,12 @@
       <Value>../Device/ATTiny84A</Value>
       <Value>../Drivers</Value>
       <Value>../Drivers/Peripheral</Value>
-      <Value>../Drivers/Peripheral/EXTI</Value>
+      <Value>../Drivers/Peripheral/PCIE</Value>
       <Value>../Drivers/Peripheral/GPIO</Value>
       <Value>../Drivers/Peripheral/ADC</Value>
       <Value>../Drivers/Peripheral/I2C</Value>
+      <Value>../Drivers/BatteryMeasure</Value>
+      <Value>../Drivers/Shooter</Value>
       <Value>../Application</Value>
       <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
     </ListValues>
@@ -115,7 +130,7 @@
     <OutputPath>bin\HW_V2\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Application\main.cpp">
+    <Compile Include="Application\main.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Application\main.h">
@@ -124,13 +139,43 @@
     <Compile Include="Application\Pinout.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Application\Revision.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Device\ATTiny84A\iotn84a.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Device\ATTiny84A\sfr_defs.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\ADC\ADC.cpp">
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasure.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\Magazine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\Magazine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Peripheral\EEPROM\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Peripheral\EEPROM\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\ShootingMode\ShootingMode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\ShootingMode\ShootingMode.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\ShootingMode\ShootingModeTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Peripheral\ADC\ADC.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\ADC\ADC.h">
@@ -139,16 +184,16 @@
     <Compile Include="Drivers\Peripheral\ADC\ADCTypes.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\EXTI\EXTI.cpp">
+    <Compile Include="Drivers\Peripheral\PCIE\PCIE.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\EXTI\EXTI.h">
+    <Compile Include="Drivers\Peripheral\PCIE\PCIE.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\EXTI\EXTITypes.h">
+    <Compile Include="Drivers\Peripheral\PCIE\PCIETypes.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\GPIO\GPIO.cpp">
+    <Compile Include="Drivers\Peripheral\GPIO\GPIO.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\GPIO\GPIO.h">
@@ -160,7 +205,7 @@
     <Compile Include="Drivers\Peripheral\GPIO\GPIOTypes.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\I2C\I2C.cpp">
+    <Compile Include="Drivers\Peripheral\I2C\I2C.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\I2C\I2C.h">
@@ -169,15 +214,26 @@
     <Compile Include="Drivers\Peripheral\I2C\I2CTypes.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\FET\FETNormal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\FET\FETNormal.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Device\ATTiny84A" />
     <Folder Include="Drivers" />
+    <Folder Include="Drivers\BatteryMeasure" />
+    <Folder Include="Drivers\FET" />
+    <Folder Include="Drivers\Magazine" />
+    <Folder Include="Drivers\Peripheral\EEPROM" />
+    <Folder Include="Drivers\ShootingMode" />
     <Folder Include="Drivers\Peripheral" />
     <Folder Include="Drivers\Peripheral\GPIO" />
     <Folder Include="Device" />
-    <Folder Include="Drivers\Peripheral\EXTI" />
+    <Folder Include="Drivers\Peripheral\PCIE" />
     <Folder Include="Drivers\Peripheral\ADC" />
     <Folder Include="Drivers\Peripheral\I2C" />
   </ItemGroup>

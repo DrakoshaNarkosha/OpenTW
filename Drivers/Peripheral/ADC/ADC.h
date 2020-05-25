@@ -4,43 +4,33 @@
 #include "ADCTypes.h"
 
 
-namespace drv
-{
-  namespace periph
-  {
-    class ADC
-    {
-    public:      
-      void init(const adc::Init_t& init);
+void adcInit(const ADCInit_t* init);
+
+
+void adcSetReference(ADCReference_t reference);
       
+void adcSetPrescallser(ADCPrescaller_t prescaller);
       
-      void setReference(adc::Reference_t reference);
+void adcSetAutoTrigger(ADCAutoTrigger_t autoTrigger);
       
-      void setPrescallser(adc::Prescaller_t prescaller);
+void adcSetBipolar(ADCBipolrar_t bipolar);
       
-      void setAutoTrigger(adc::AutoTrigger_t autoTrigger);
+void adcSetChannel(ADCChannel_t channel);
       
-      void setBipolar(adc::Bipolrar_t bipolar);
-      
-      void setChannel(adc::Channel_t channel);
-      
-      void setIt(adc::Interrupt_t interrupt);
+void adcSetIt(ADCInterrupt_t interrupt);
       
             
-      void enable();
+void adcEnable();
       
-      void disable();
+void adcDisable();
 
             
-      void start();
+void adcStart();
 
 
-      uint16_t read();
+uint16_t adcRead();
 
 
-      bool isReady();      
-    };
-  } 
-}
+bool adcReady();      
 
 #endif

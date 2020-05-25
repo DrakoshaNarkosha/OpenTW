@@ -4,12 +4,4 @@
 #include "I2CTypes.h"
 
 
-namespace drv
-{
-  namespace periph
-  {
-
-  } 
-}
-
 #endif

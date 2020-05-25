@@ -4,27 +4,18 @@
 #include "GPIOTypes.h"
 
 
-namespace drv
+volatile static const GPIO_t GPIOA =
 {
-  namespace periph
-  {
-    namespace gpio
-    {
-      volatile static const GPIO_t GPIOA =
-      {
-        &DDRA,
-        &PORTA,
-        &PINA
-      };
+  &DDRA,
+  &PORTA,
+  &PINA
+};
 
-      volatile static const GPIO_t GPIOB =
-      {
-        &DDRB,
-        &PORTB,
-        &PINB
-      };
-    }
-  }
-}
+volatile static const GPIO_t GPIOB =
+{
+  &DDRB,
+  &PORTB,
+  &PINB
+};
 
 #endif

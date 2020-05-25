@@ -4,17 +4,4 @@
 #include "iotn84a.h"
 
 
-namespace drv
-{
-  namespace periph
-  {
-    namespace i2c
-    {
-
-    }
-  }
-}
-
-
-
 #endif
