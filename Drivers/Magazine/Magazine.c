@@ -2,7 +2,7 @@
 #include "Magazine.h"
 
 
-static bool magazine;
+static bool magazine = false;
 
 
 void magazineInit(void)
