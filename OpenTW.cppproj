@@ -46,80 +46,79 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'HW_V1' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.Device>-mmcu=attiny84a -B "%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\gcc\dev\attiny84a"</avrgcc.common.Device>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
-        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>HW_V1</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../Device</Value>
-            <Value>../Device/ATTiny84A</Value>
-            <Value>../Drivers</Value>
-            <Value>../Drivers/Peripheral</Value>
-            <Value>../Drivers/Peripheral/EEPROM</Value>
-            <Value>../Drivers/Peripheral/PCIE</Value>
-            <Value>../Drivers/Peripheral/GPIO</Value>
-            <Value>../Drivers/Peripheral/ADC</Value>
-            <Value>../Drivers/Peripheral/I2C</Value>
-            <Value>../Drivers/BatteryMeasure</Value>
-            <Value>../Drivers/Magazine</Value>
-            <Value>../Drivers/FET</Value>
-            <Value>../Drivers/ShootingMode</Value>
-            <Value>../Application</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>HW_V1</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>../Device</Value>
-            <Value>../Device/ATTiny84A</Value>
-            <Value>../Drivers</Value>
-            <Value>../Drivers/Peripheral</Value>
-            <Value>../Drivers/Peripheral/PCIE</Value>
-            <Value>../Drivers/Peripheral/GPIO</Value>
-            <Value>../Drivers/Peripheral/ADC</Value>
-            <Value>../Drivers/Peripheral/I2C</Value>
-            <Value>../Drivers/BatteryMeasure</Value>
-            <Value>../Drivers/Shooter</Value>
-            <Value>../Application</Value>
-            <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-        <avrgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </avrgcccpp.linker.libraries.Libraries>
-        <avrgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
-          </ListValues>
-        </avrgcccpp.assembler.general.IncludePaths>
-        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-      </AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=attiny84a -B "%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\gcc\dev\attiny84a"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>HW_V1</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../Device</Value>
+      <Value>../Device/ATTiny84A</Value>
+      <Value>../Drivers</Value>
+      <Value>../Drivers/Peripheral</Value>
+      <Value>../Drivers/Peripheral/EEPROM</Value>
+      <Value>../Drivers/Peripheral/PCI</Value>
+      <Value>../Drivers/Peripheral/GPIO</Value>
+      <Value>../Drivers/Peripheral/ADC</Value>
+      <Value>../Drivers/BatteryMeasure</Value>
+      <Value>../Drivers/Magazine</Value>
+      <Value>../Drivers/FET</Value>
+      <Value>../Drivers/ShootingMode</Value>
+      <Value>../Application</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>HW_V1</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../Device</Value>
+      <Value>../Device/ATTiny84A</Value>
+      <Value>../Drivers</Value>
+      <Value>../Drivers/Peripheral</Value>
+      <Value>../Drivers/Peripheral/PCIE</Value>
+      <Value>../Drivers/Peripheral/GPIO</Value>
+      <Value>../Drivers/Peripheral/ADC</Value>
+      <Value>../Drivers/Peripheral/I2C</Value>
+      <Value>../Drivers/BatteryMeasure</Value>
+      <Value>../Drivers/Shooter</Value>
+      <Value>../Application</Value>
+      <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
     </ToolchainSettings>
     <UsesExternalMakeFile>False</UsesExternalMakeFile>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
@@ -169,6 +168,15 @@
     <Compile Include="Drivers\Peripheral\EEPROM\EEPROM.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\Peripheral\Timer\TimerCounter0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Peripheral\Timer\TimerCounter0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Peripheral\Timer\TimerCounter0Types.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\ShootingMode\ShootingMode.c">
       <SubType>compile</SubType>
     </Compile>
@@ -187,13 +195,13 @@
     <Compile Include="Drivers\Peripheral\ADC\ADCTypes.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\PCIE\PCIE.c">
+    <Compile Include="Drivers\Peripheral\PCI\PCI.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\PCIE\PCIE.h">
+    <Compile Include="Drivers\Peripheral\PCI\PCI.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\Peripheral\PCIE\PCIETypes.h">
+    <Compile Include="Drivers\Peripheral\PCI\PCITypes.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\GPIO\GPIO.c">
@@ -206,15 +214,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\GPIO\GPIOTypes.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Peripheral\I2C\I2C.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Peripheral\I2C\I2C.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Peripheral\I2C\I2CTypes.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\FET\FETNormal.c">
@@ -232,13 +231,13 @@
     <Folder Include="Drivers\FET" />
     <Folder Include="Drivers\Magazine" />
     <Folder Include="Drivers\Peripheral\EEPROM" />
+    <Folder Include="Drivers\Peripheral\Timer" />
     <Folder Include="Drivers\ShootingMode" />
     <Folder Include="Drivers\Peripheral" />
     <Folder Include="Drivers\Peripheral\GPIO" />
     <Folder Include="Device" />
-    <Folder Include="Drivers\Peripheral\PCIE" />
+    <Folder Include="Drivers\Peripheral\PCI" />
     <Folder Include="Drivers\Peripheral\ADC" />
-    <Folder Include="Drivers\Peripheral\I2C" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

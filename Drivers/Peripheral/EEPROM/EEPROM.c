@@ -1,6 +1,16 @@
+/**
+  ******************************************************************************
+  * @file    EEPROM.h
+  * @brief   EEPROM (Electrically Erasable Programmable Read-Only Memory)
+  *          driver for 8-bit AVR MCU (source)
+  ******************************************************************************
+  */
+
+
 #include "EEPROM.h"
 
 
+/* Write one byte to EEPROM. */
 void eepromWriteByte(uint16_t addr, uint8_t data)
 {
   while(EECR & (1 << EEPE)) {}
@@ -11,6 +21,7 @@ void eepromWriteByte(uint16_t addr, uint8_t data)
   EECR  |= (1 << EEPE);  
 }
 
+/* Read one byte from EEPROM. */
 uint8_t eepromReadByte(uint16_t addr)
 {
   while(EECR & (1 << EEPE)) {}
@@ -20,6 +31,7 @@ uint8_t eepromReadByte(uint16_t addr)
 }
 
 
+/* Write data from buffer to EEPROM. */
 void eepromWrite(uint16_t addr, uint8_t* data, uint16_t size)
 {
   while (size-- != 0)
@@ -33,6 +45,7 @@ void eepromWrite(uint16_t addr, uint8_t* data, uint16_t size)
   }
 }
 
+/* Read data from EEPROM to buffer. */
 void eepromRead(uint16_t addr, uint8_t* data, uint16_t size)
 {
   while (size-- != 0)
