@@ -1,5 +1,20 @@
+/**
+  ******************************************************************************
+  * @file    TimerCounter0.h
+  * @brief   Timer/Counter 0 driver for 8-bit AVR MCU (source)
+  * @version 1.0.0  
+  ******************************************************************************
+  */
+
+
 #include "TimerCounter0.h"
 
+
+/** @ingroup    Timer_0
+  * @addtogroup Timer_0_Driver
+  * @brief      Timer 0 driver
+  * @{
+  */
 
 /* Set clock source for the timer. */
 void tc0SetClock(TC0Clk_t source)
@@ -22,3 +37,7 @@ void tc0SetIt(TC0It_t interrupt)
   /*        TOIE0 | OCIE0A | OCIE0B*/
   TIMSK0 |= interrupt;
 }
+
+/** @}
+  * End of Timer_0_Driver defgroup.
+  */

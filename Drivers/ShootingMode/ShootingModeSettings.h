@@ -1,13 +1,17 @@
 /**
   ******************************************************************************
-  * @file    ShootingModeTypes.h
-  * @brief   Types for Shooting Mode module
+  * @file    ShootingModeSettings.h
+  * @brief   Settings for Shooting Mode module
   ******************************************************************************
   */
 
 
-#ifndef SHOOTING_MODE_TYPES_H
-#define SHOOTING_MODE_TYPES_H
+#ifndef SHOOTING_MODE_SETTINGS_H
+#define SHOOTING_MODE_SETTINGS_H
+
+#include "Pinout.h"
+#include "Addresses.h"
+
 
 /** @addtogroup Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
@@ -30,24 +34,22 @@
 
 
 /** @ingroup    Peripheral
-  * @defgroup   Shooting_Mode_Types
-  * @brief      Shooting mode driver types
+  * @defgroup   Shooting_Mode_Settings
+  * @brief      Settings for Shooting Mode module
   * @{
   */
 
-/**
-  * Shooting modes.
-  */
-typedef enum
-{
-  SHOOTING_MODE_SEMI      = 0x00, /*!< Semi mode. */
-  SHOOTING_MODE_AUTO      = 0x01, /*!< Full auto mode.*/
-  SHOOTING_MODE_BURST     = 0x02, /*!< 3-burst mode. */
-}ShootingMode_t;
+#define GPIO_MODE         MODE_SIGNAL_MODE    /*!< GPIO mode. */
+#define GPIO_PULL         PULL_SIGNAL_MODE    /*!< GPIO pull settings. */
+#define GPIO_PORT         PORT_SIGNAL_MODE    /*!< GPIO port. */
+#define GPIO_PIN          PIN_SIGNAL_MODE     /*!< GPIO pin. */
+
+#define EEPROM_ADDR       ADDR_SHOOTING_MODE  /*!< EEPROM address to store aito shooting mode. */
 
 /** @}
-  * End of Shooting_Mode_Types defgroup.
+  * End of Shooting_Mode_Settings defgroup.
   */
+
 
 /** @}
   * End of Shooting_Mode defgroup.

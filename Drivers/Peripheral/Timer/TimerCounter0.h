@@ -2,6 +2,7 @@
   ******************************************************************************
   * @file    TimerCounter0.h
   * @brief   Timer/Counter 0 driver for 8-bit AVR MCU (header)
+  * @version 1.0.0
   *
   * Low-level Timer/Counter 0 driver for 8-bit AVR MCU. This drivers is wrapper
   * on MCU registers to give more convenient access to Timer/Counter 0 
@@ -14,6 +15,10 @@
   * 3) Call tc0SetIt() to enable corresponding interrupt.<br>
   * 4) Call tc0SetClock() to enable timer with selected clock source.<br>
   * 5) Handle events inside interrupt vector, if global interrupt flag is set.
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>  
   ******************************************************************************
   */
 

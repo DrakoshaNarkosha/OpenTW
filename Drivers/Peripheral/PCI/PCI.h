@@ -2,6 +2,7 @@
   ******************************************************************************
   * @file    PCI.h
   * @brief   PCI (pin change interrupt) driver for 8-bit AVR MCU (header)
+  * @version 1.0.0  
   *
   * Low-level PCI driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
   * registers to give more convenient access to PCI peripheral registers.
@@ -15,6 +16,10 @@
   * 5) Handle event inside interrupt vector.
   *
   * @note GPIO pin may be reconfigured in any time of program executing.
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>  
   ******************************************************************************
   */
 
@@ -39,7 +44,7 @@
 
 
 /** @ingroup    Peripheral
-  * @addtogroup PCI
+  * @defgroup   PCI
   * @brief      Pin change interrupt driver
   * @{
   */

@@ -3,6 +3,7 @@
   * @file    EEPROM.h
   * @brief   EEPROM (Electrically Erasable Programmable Read-Only Memory) 
   *          driver for 8-bit AVR MCU (header)
+  * @version 1.0.0
   *
   * Low-level EEPROM driver for 8-bit AVR MCU. This drivers is wrapper on MCU
   * registers to give more convenient access to EEPROM peripheral registers.
@@ -14,6 +15,10 @@
   *
   * @warning There is no check of memory overflow inside these functions. Be
   *          careful with addressing.
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>
   ******************************************************************************
   */
 
@@ -40,7 +45,7 @@
 
 
 /** @ingroup    Peripheral
-  * @addtogroup EEPROM
+  * @defgroup   EEPROM
   * @brief      EEPROM driver
   * @{
   */

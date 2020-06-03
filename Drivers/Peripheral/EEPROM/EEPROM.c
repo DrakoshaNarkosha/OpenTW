@@ -3,12 +3,19 @@
   * @file    EEPROM.h
   * @brief   EEPROM (Electrically Erasable Programmable Read-Only Memory)
   *          driver for 8-bit AVR MCU (source)
+  * @version 1.0.0
   ******************************************************************************
   */
 
 
 #include "EEPROM.h"
 
+
+/** @ingroup    Peripheral
+  * @addtogroup EEPROM
+  * @brief      EEPROM driver
+  * @{
+  */
 
 /* Write one byte to EEPROM. */
 void eepromWriteByte(uint16_t addr, uint8_t data)
@@ -56,3 +63,7 @@ void eepromRead(uint16_t addr, uint8_t* data, uint16_t size)
     *data++ = EEDR;
   }
 }
+
+/** @}
+  * End of EEPROM defgroup.
+  */

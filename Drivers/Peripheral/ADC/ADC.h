@@ -3,6 +3,7 @@
   * @file    ADC.h
   * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCU 
   *          (header)
+  * @version 1.0.0
   *
   * Low-level ADC driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
   * registers to give more convenient access to ADC peripheral registers.
@@ -39,6 +40,10 @@
   * 6) Read data using adcRead() inside ADC_vect interrupt vector or somewhere
   *    else.
   * 7) [Optional] Disable ADC using adcDisable() function).<br>
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>
   ******************************************************************************
   */
 

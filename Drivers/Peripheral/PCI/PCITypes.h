@@ -2,6 +2,11 @@
   ******************************************************************************
   * @file    PCITypes.h
   * @brief   Types for PCI (pin change interrupt) library
+  * @version 1.0.0  
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>  
   ******************************************************************************
   */
 

@@ -1,11 +1,29 @@
 #include "main.h"
 
 
+#include "Tick.h"
+
 int main(void)
 {
+  asm("SEI");
+
+
+  uint16_t var = 0;  
+    
+    
+  tickStart();  
+    
   while (1) 
   {
-
+    
+    if (var == 15)
+    {
+      
+      while(1)
+      {
+        asm("NOP");
+      }
+    }
   }
 }
 

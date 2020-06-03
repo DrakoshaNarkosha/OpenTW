@@ -2,6 +2,11 @@
   ******************************************************************************
   * @file    TimerCounter0Types.h
   * @brief   Types for Timer/Counter 0 library
+  * @version 1.0.0
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>
   ******************************************************************************
   */
 

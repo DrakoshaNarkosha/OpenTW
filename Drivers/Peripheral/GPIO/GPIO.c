@@ -3,12 +3,19 @@
   * @file    GPIO.h
   * @brief   GPIO (General Purpose Input Output) driver for 8-bit AVR MCU
   *          (source)
+  * @version 1.0.0  
   ******************************************************************************
   */
 
 
 #include "GPIO.h"
 
+
+/** @ingroup    GPIO
+  * @addtogroup GPIO_Driver
+  * @brief      Global structures for GPIO driver
+  * @{
+  */
 
 /* Initialize GPIO. */
 void gpioInit(const volatile GPIO_t* port, const GPIOInit_t* init)
@@ -49,3 +56,7 @@ bool gpioRead(const volatile GPIO_t* port, GPIOPin_t pin)
 {
   return *port->PIN & pin;  
 }
+
+/** @}
+  * End of GPIO_Driver defgroup.
+  */

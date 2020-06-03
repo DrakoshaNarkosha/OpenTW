@@ -3,12 +3,19 @@
   * @file    ADC.c
   * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCU
   *          (source)
+  * @version 1.0.0  
   ******************************************************************************
   */
 
 
 #include "ADC.h"
 
+
+/** @ingroup    ADC
+  * @addtogroup ADC_Driver
+  * @brief      ADC driver realization
+  * @{
+  */
 
 /* Initialize ADC. */
 void adcInit(const ADCInit_t* init)
@@ -97,3 +104,7 @@ bool adcReady()
 {
   return ADCSRA & (1 << ADSC);
 }
+
+/** @}
+  * End of ADC_Driver defgroup.
+  */

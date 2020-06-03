@@ -2,6 +2,7 @@
   ******************************************************************************
   * @file    GPIODef.h
   * @brief   Structures with control registers for GPIO ports
+  * @version 1.0.0
   *
   * Add instances of structures for each GPIO port to use it with GPIO library.
   * GPIO control register addresses must be taken with "&" operation to defines
@@ -16,6 +17,10 @@
   * @endcode
   *
   * @note Structure instances MUST be volatile static const.
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>  
   ******************************************************************************
   */
 

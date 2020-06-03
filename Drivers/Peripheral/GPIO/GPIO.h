@@ -3,6 +3,7 @@
   * @file    GPIO.h
   * @brief   GPIO (General Purpose Input Output) driver for 8-bit AVR MCU 
   *          (header)
+  * @version 1.0.0
   *
   * Low-level GPIO driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
   * registers to give more convenient access to GPIO peripheral registers.
@@ -16,6 +17,10 @@
   * 3) Use all other functions with proper port and pin parameters. 
   *
   * @note GPIO pin may be reconfigured in any time of program executing.
+  *
+  * Changelog:<br>
+  * # Version 1.0.0<br>
+  *   - Initial version.<br>  
   ******************************************************************************
   */
 

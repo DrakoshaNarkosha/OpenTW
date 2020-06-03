@@ -2,7 +2,7 @@
 #include "Magazine.h"
 
 
-static bool magazine = false;
+static bool g_magazine = false;
 
 
 void magazineInit(void)
@@ -15,17 +15,17 @@ void magazineInit(void)
   }; 
   
   gpioInit(&PORT_SIGNAL_MAGAZINE, &gpio);
-  magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
+  g_magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
 }
 
 
 bool magazinePresent(void)
 {
-  return magazine;
+  return g_magazine;
 }
 
 
 void magazineIrqHandler(void)
 {
-  magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
+  g_magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
 }
