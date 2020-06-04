@@ -1,4 +1,6 @@
-#include "Pinout.h"
+#include "GPIO.h"
+
+#include "MagazineSettings.h"
 #include "Magazine.h"
 
 
@@ -9,13 +11,13 @@ void magazineInit(void)
 {
   GPIOInit_t gpio =
   {
-    .mode   = MODE_SIGNAL_MAGAZINE,
-    .pullUp = PULL_SIGNAL_MAGAZINE,
-    .pin    = PIN_SIGNAL_MAGAZINE,
+    .mode   = GPIO_MODE,
+    .pullUp = GPIO_PULL,
+    .pin    = GPIO_PIN,
   }; 
   
-  gpioInit(&PORT_SIGNAL_MAGAZINE, &gpio);
-  g_magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
+  gpioInit(&GPIO_PORT, &gpio);
+  g_magazine = gpioRead(&GPIO_PORT, GPIO_PIN);
 }
 
 
@@ -27,5 +29,5 @@ bool magazinePresent(void)
 
 void magazineIrqHandler(void)
 {
-  g_magazine = gpioRead(&PORT_SIGNAL_MAGAZINE, PIN_SIGNAL_MAGAZINE);
+  g_magazine = gpioRead(&GPIO_PORT, GPIO_PIN);
 }

@@ -139,6 +139,9 @@
     <Compile Include="Drivers\BatteryMeasure\BatteryMeasure.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\Magazine\MagazineSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\ShootingMode\ShootingModeSettings.h">
       <SubType>compile</SubType>
     </Compile>

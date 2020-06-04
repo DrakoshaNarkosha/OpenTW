@@ -4,7 +4,7 @@
   * @brief   Implementation of Shooting Mode module (header)
   * @version 1.0.0
   *
-  * Current module implements checker of current shooting mode (based on AVR 
+  * Current module implements checker of current Shooting Mode (based on AVR 
   * PCI system). Depending on automatic mode, saved to EEPROM may switch 
   * between [semi - full auto] and [semi - 3 burst] modes. 
   * 
@@ -92,7 +92,7 @@ void shootingModeChange(void);
 ShootingMode_t shootingModeRead(void);
 
 
-/** Interrupt handler for shooting mode module.
+/** Interrupt handler for the Shooting Mode module.
   *
   * Call this function inside corresponding PCI interrupt handler, based on
   * GPIO settings.

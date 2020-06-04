@@ -69,7 +69,7 @@ ShootingMode_t shootingModeRead(void)
 }
 
 
-/* Interrupt handler for shooting mode module. */
+/* Interrupt handler for the Shooting Mode module. */
 void shootingModeIrqHandler(void)
 {
   g_currMode = (gpioRead(&GPIO_PORT, GPIO_PIN) ? SHOOTING_MODE_SEMI : g_autoMode);

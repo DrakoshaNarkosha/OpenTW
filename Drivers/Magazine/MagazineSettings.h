@@ -1,14 +1,16 @@
 /**
   ******************************************************************************
-  * @file    ShootingModeTypes.h
-  * @brief   Types for Shooting Mode module
+  * @file    MagazineSettings.h
+  * @brief   Settings for Magazine module
   * @version 1.0.0
   ******************************************************************************
   */
 
 
-#ifndef SHOOTING_MODE_TYPES_H
-#define SHOOTING_MODE_TYPES_H
+#ifndef MAGAZINE_SETTINGS_H
+#define MAGAZINE_SETTINGS_H
+
+#include "Pinout.h"
 
 
 /** @addtogroup Drivers
@@ -25,34 +27,30 @@
 
 
 /** @ingroup    Peripheral
-  * @addtogroup Shooting_Mode
-  * @brief      Shooting Mode handler 
+  * @addtogroup Magazine
+  * @brief      Magazine handler 
   * @{
   */
 
 
 /** @ingroup    Peripheral
-  * @defgroup   Shooting_Mode_Types
-  * @brief      Shooting mode driver types
+  * @defgroup   Magazine_Settings
+  * @brief      Settings for Magazine module
   * @{
   */
 
-/**
-  * Shooting modes.
-  */
-typedef enum
-{
-  SHOOTING_MODE_SEMI      = 0x00, /*!< Semi mode. */
-  SHOOTING_MODE_AUTO      = 0x01, /*!< Full auto mode.*/
-  SHOOTING_MODE_BURST     = 0x02, /*!< 3-burst mode. */
-}ShootingMode_t;
+#define GPIO_MODE         MODE_SIGNAL_MAGAZINE    /*!< GPIO mode. */
+#define GPIO_PULL         PULL_SIGNAL_MAGAZINE    /*!< GPIO pull settings. */
+#define GPIO_PORT         PORT_SIGNAL_MAGAZINE    /*!< GPIO port. */
+#define GPIO_PIN          PIN_SIGNAL_MAGAZINE     /*!< GPIO pin. */
 
 /** @}
-  * End of Shooting_Mode_Types defgroup.
+  * End of Magazine_Settings defgroup.
   */
 
+
 /** @}
-  * End of Shooting_Mode defgroup.
+  * End of Magazine defgroup.
   */
 
 
