@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    JumpersSettings.h
+  * @file    JumpersInterface.c
   * @brief   Interface for Jumpers module (source)
   * @version 1.0.0
   ******************************************************************************
@@ -12,6 +12,13 @@
 #include "JumpersSettings.h"
 #include "JumpersInterface.h"
 
+
+/** @ingroup    Jumpers
+  * @defgroup   Jumpers_Interface
+  * @brief      Interface for the Jumpers module
+  * @details    More information on page @ref driver_jumpers_interface  
+  * @{
+  */
 
 /* Initialize jumpers hardware, based on settings inside the JumpresSettings.h file. */
 void jumpersIfInit(void)
@@ -34,3 +41,7 @@ bool jumpersIfRead(const void* port, uint8_t pin)
 {
   return !gpioRead((const GPIO_t*)port, pin);
 }
+
+/** @}
+  * End of Jumpers_Interface defgroup.
+  */

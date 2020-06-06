@@ -10,7 +10,7 @@
   *   Current module implements checker of jumpers state. Currently, implements
   *   two jumpers: jumper 1 and jumper 2.
   *
-  *   Current driver cosist of settings file, hardware-related interface and
+  *   Current driver consist of settings file, hardware-related interface and
   *   application driver (current file). More information about modules may be
   *   found in next pages:<br>
   *   <table bgcolor="B0E0E6" border="5">
@@ -39,9 +39,11 @@
   *         connected to the ground) and false if jumper is not soldered 
   *         (related line is left floating).
   *
+  *
   * @subsection Usage
   *   1. Call jumpersInit().
   *   2. Call jumper1Read() and jumper2Read() to read current jumpers state.
+  *
   *
   * @subsection Changelog
   *   - <b><em>Version 1.0.0</em></b>

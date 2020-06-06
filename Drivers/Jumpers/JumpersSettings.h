@@ -7,10 +7,11 @@
   * @page driver_jumpers_settings  Jumpers driver settings
   *
   * @subsection Description
-  *   GPIO settings for jumpers module are present here. This is platform-
+  *   GPIO settings for Jumpers module are present here. This is platform-
   *   related file, so content and options may be changed from platform to 
   *   platform. Only port and pin settings are present here, all other GPIO 
-  *   settings must be hardcoded inside JumpersInterface.c files.
+  *   settings must be hardcoded inside JumpersInterface.c file.
+  *
   *
   * @subsection Changelog
   *   - <b><em>Version 1.0.0</em></b>

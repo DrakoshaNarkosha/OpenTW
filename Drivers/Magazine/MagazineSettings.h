@@ -3,6 +3,19 @@
   * @file    MagazineSettings.h
   * @brief   Settings for Magazine module
   * @version 1.0.0
+  *
+  * @page driver_magazine_settings  Magazine driver settings
+  *
+  * @subsection Description
+  *   GPIO settings for Magazine module are present here. This is platform-
+  *   related file, so content and options may be changed from platform to
+  *   platform. Only port and pin settings are present here, all other GPIO
+  *   settings must be hardcoded inside MagazineInterface.c file.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -20,15 +33,9 @@
 
 
 /** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
   * @addtogroup Magazine
   * @brief      Magazine handler 
+  * @details    More information on page @ref driver_magazine
   * @{
   */
 
@@ -36,11 +43,10 @@
 /** @ingroup    Magazine
   * @defgroup   Magazine_Settings
   * @brief      Settings for Magazine module
+  * @details    More information on page @ref driver_magazine_settings  
   * @{
   */
 
-#define GPIO_MODE         MODE_SIGNAL_MAGAZINE    /*!< GPIO mode. */
-#define GPIO_PULL         PULL_SIGNAL_MAGAZINE    /*!< GPIO pull settings. */
 #define GPIO_PORT         PORT_SIGNAL_MAGAZINE    /*!< GPIO port. */
 #define GPIO_PIN          PIN_SIGNAL_MAGAZINE     /*!< GPIO pin. */
 
@@ -51,11 +57,6 @@
 
 /** @}
   * End of Magazine defgroup.
-  */
-
-
-/** @}
-  * End of Peripheral defgroup.
   */
 
 

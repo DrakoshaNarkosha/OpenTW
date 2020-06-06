@@ -46,60 +46,60 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'HW_V1' ">
     <ToolchainSettings>
       <AvrGccCpp>
-  <avrgcc.common.Device>-mmcu=attiny84a -B "%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\gcc\dev\attiny84a"</avrgcc.common.Device>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
-  <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
-  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols>
-    <ListValues>
-      <Value>HW_V1</Value>
-    </ListValues>
-  </avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>../Device</Value>
-      <Value>../Device/ATTiny84A</Value>
-      <Value>../Drivers</Value>
-      <Value>../Drivers/Peripheral</Value>
-      <Value>../Drivers/Peripheral/EEPROM</Value>
-      <Value>../Drivers/Peripheral/Timer</Value>
-      <Value>../Drivers/Peripheral/PCI</Value>
-      <Value>../Drivers/Peripheral/GPIO</Value>
-      <Value>../Drivers/Peripheral/ADC</Value>
-      <Value>../Drivers/Tick</Value>
-      <Value>../Drivers/Jumpers</Value>
-      <Value>../Drivers/BatteryMeasure</Value>
-      <Value>../Drivers/Magazine</Value>
-      <Value>../Drivers/FET</Value>
-      <Value>../Drivers/ShootingMode</Value>
-      <Value>../Application</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-  <avrgcccpp.linker.libraries.Libraries>
-    <ListValues>
-      <Value>libm</Value>
-    </ListValues>
-  </avrgcccpp.linker.libraries.Libraries>
-  <avrgcccpp.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
-    </ListValues>
-  </avrgcccpp.assembler.general.IncludePaths>
-  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-</AvrGccCpp>
+        <avrgcc.common.Device>-mmcu=attiny84a -B "%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\gcc\dev\attiny84a"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>False</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>False</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>False</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>HW_V1</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../Device</Value>
+            <Value>../Device/ATTiny84A</Value>
+            <Value>../Drivers</Value>
+            <Value>../Drivers/Peripheral</Value>
+            <Value>../Drivers/Peripheral/EEPROM</Value>
+            <Value>../Drivers/Peripheral/Timer</Value>
+            <Value>../Drivers/Peripheral/PCI</Value>
+            <Value>../Drivers/Peripheral/GPIO</Value>
+            <Value>../Drivers/Peripheral/ADC</Value>
+            <Value>../Drivers/Tick</Value>
+            <Value>../Drivers/Jumpers</Value>
+            <Value>../Drivers/BatteryMeasure</Value>
+            <Value>../Drivers/Magazine</Value>
+            <Value>../Drivers/FET</Value>
+            <Value>../Drivers/ShootingMode</Value>
+            <Value>../Application</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\Atmel\ATtiny_DFP\1.4.310\include</Value>
+          </ListValues>
+        </avrgcccpp.assembler.general.IncludePaths>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
     </ToolchainSettings>
     <UsesExternalMakeFile>False</UsesExternalMakeFile>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
@@ -153,6 +153,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Jumpers\JumpersSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\MagazineInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\MagazineInterface.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Magazine\MagazineSettings.h">

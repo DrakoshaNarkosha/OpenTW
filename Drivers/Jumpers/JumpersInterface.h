@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    JumpersSettings.h
+  * @file    JumpersInterface.h
   * @brief   Interface for Jumpers module (header)
   * @version 1.0.0
   *
@@ -10,6 +10,12 @@
   *   Current module implements platform-related hardware functions for 
   *   operations with jumpers. This module must implement initialization and 
   *   GPIO read function for proper functioning.
+  *
+  *   @note Low logic level on GPIO line means, that jumper is soldered, so 
+  *         read read function must return true. High logic level means, that 
+  *         jumper is not soldered, so read function must return false. For
+  *         this reasons input signal from GPIO line must be inverted.
+  *
   *
   * @subsection Changelog
   *   - <b><em>Version 1.0.0</em></b>
@@ -51,6 +57,9 @@ void jumpersIfInit(void);
 
 
 /** Read state of the jumper on selected GPIO line.
+  *
+  * @param[in]     port  GPIO port.
+  * @param[in]     pin   GPIO pin.
   *
   * @retval false  Jumper is not present.
   * @retval true   Jumper is present.

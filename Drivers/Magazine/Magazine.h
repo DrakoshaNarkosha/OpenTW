@@ -1,21 +1,59 @@
 /**
   ******************************************************************************
   * @file    Magazine.h
-  * @brief   Implementation of Magazine module (header)
-  * @version 1.0.0
+  * @brief   Magazine module (header)
+  * @version 1.1.0
   *
-  * Current module implements checker of magazine presence (based on AVR PCI
-  * system).
+  * @page driver_magazine  Magazine driver
   *
-  * Usage:<br>
-  * 1) Put magazineIrqHandler() to proper interrupt handler, based on GPIO
-  *    settings for Magazine module.<br> 
-  * 2) Call magazineInit().<br>
-  * 3) Check if magazine is present, using magazinePresent() function.<br>
+  * @subsection Description
+  *   Current module implements interrupt-based checking of magazine presence.
+  *   For proper functioning GPIO line must have external interrupt feature.
+  *   Otherwise, use direct GPIO read inside cycle instead of this module. 
+  *  
+  *   @note magazinePresent() function (for checking, is magazine is present)
+  *         doesn`t perform any read operations. It only returns global state
+  *         variable value.
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  *   Current driver consist of settings file, hardware-related interface and
+  *   application driver (current file). More information about modules may be
+  *   found in next pages:<br>
+  *   <table bgcolor="B0E0E6" border="5">
+  *     <tr>
+  *       <th>MODULE</th>
+  *       <th>PAGE</th>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Settings</th>
+  *		  <td>@ref driver_magazine_settings</td>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Interface</th>
+  *		  <td>@ref driver_magazine_interface</td>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Driver</th>
+  *		  <td>@ref driver_magazine</td>
+  *     </tr>
+  *   </table>  
+  *
+  *
+  * @subsection Usage
+  *   1. Put magazineIrqHandler() to proper interrupt handler, based on GPIO
+  *      settings for Magazine module.
+  *   2. Call magazineInit().
+  *   3. Check if magazine is present, using magazinePresent() function.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
+    * - <b><em>Version 1.1.0</em></b>
+    *     - Added Interface files to separate platform-related logic from module
+    *       implementation.
   ******************************************************************************
   */
 
@@ -25,6 +63,7 @@
 
 #include <stdbool.h>
 
+
 /** @addtogroup Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
@@ -32,22 +71,17 @@
 
 
 /** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
   * @addtogroup Magazine
   * @brief      Magazine handler 
+  * @details    More information on page @ref driver_magazine  
   * @{
   */
 
 
-/** @ingroup    Peripheral
+/** @ingroup    Magazine
   * @defgroup   Magazine_Driver
   * @brief      Magazine driver
+  * @details    More information on page @ref driver_magazine  
   * @{
   */
 
@@ -68,8 +102,8 @@ bool magazinePresent(void);
 
 /** Interrupt handler for the Magazine module.
   *
-  * Call this function inside corresponding PCI interrupt handler, based on
-  * GPIO settings.
+  * Call this function inside corresponding interrupt handler, based on GPIO 
+  * settings.
   *
   * This function updates current magazine state by checking corresponding GPIO
   * state. False means, that magazine is not present. True means, that magazine
@@ -86,11 +120,6 @@ void magazineIrqHandler(void);
 
 /** @}
   * End of Magazine defgroup.
-  */
-
-
-/** @}
-  * End of Peripheral defgroup.
   */
 
 
