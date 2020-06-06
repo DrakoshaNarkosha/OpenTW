@@ -8,13 +8,9 @@
 
 #define PORT_JUMPER_1           GPIOA
 #define PIN_JUMPER_1            GPIO_PIN_0
-#define MODE_JUMPER_1           GPIO_MODE_INPUT
-#define PULL_JUMPER_1           GPIO_PULL_UP_ENABLE
 
 #define PORT_JUMPER_2           GPIOA
 #define PIN_JUMPER_2            GPIO_PIN_1
-#define MODE_JUMPER_2           GPIO_MODE_INPUT
-#define PULL_JUMPER_2           GPIO_PULL_UP_ENABLE
 
 #define PORT_SIGNAL_MAGAZINE    GPIOA
 #define PIN_SIGNAL_MAGAZINE     GPIO_PIN_5

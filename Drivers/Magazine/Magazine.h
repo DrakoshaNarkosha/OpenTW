@@ -23,6 +23,7 @@
 #ifndef MAGAZINE_H
 #define MAGAZINE_H
 
+#include <stdbool.h>
 
 /** @addtogroup Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)

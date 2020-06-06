@@ -1,14 +1,14 @@
 /**
   ******************************************************************************
-  * @file    MagazineSettings.h
-  * @brief   Settings for Magazine module
+  * @file    TriggerSettings.h
+  * @brief   Settings for Trigger module
   * @version 1.0.0
   ******************************************************************************
   */
 
 
-#ifndef MAGAZINE_SETTINGS_H
-#define MAGAZINE_SETTINGS_H
+#ifndef TRIGGER_SETTINGS_H
+#define TRIGGER_SETTINGS_H
 
 #include "Pinout.h"
 
@@ -27,30 +27,30 @@
 
 
 /** @ingroup    Peripheral
-  * @addtogroup Magazine
+  * @addtogroup Trigger
   * @brief      Magazine handler 
   * @{
   */
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Settings
-  * @brief      Settings for Magazine module
+/** @ingroup    Trigger
+  * @defgroup   Trigger_Settings
+  * @brief      Settings for Trigger module
   * @{
   */
 
-#define GPIO_MODE         MODE_SIGNAL_MAGAZINE    /*!< GPIO mode. */
-#define GPIO_PULL         PULL_SIGNAL_MAGAZINE    /*!< GPIO pull settings. */
-#define GPIO_PORT         PORT_SIGNAL_MAGAZINE    /*!< GPIO port. */
-#define GPIO_PIN          PIN_SIGNAL_MAGAZINE     /*!< GPIO pin. */
+#define GPIO_MODE         MODE_SIGNAL_TRIGGER    /*!< GPIO mode. */
+#define GPIO_PULL         PULL_SIGNAL_TRIGGER    /*!< GPIO pull settings. */
+#define GPIO_PORT         PORT_SIGNAL_TRIGGER    /*!< GPIO port. */
+#define GPIO_PIN          PIN_SIGNAL_TRIGGER     /*!< GPIO pin. */
 
 /** @}
-  * End of Magazine_Settings defgroup.
+  * End of Trigger_Settings defgroup.
   */
 
 
 /** @}
-  * End of Magazine defgroup.
+  * End of Trigger defgroup.
   */
 
 

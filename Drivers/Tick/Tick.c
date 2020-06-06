@@ -23,7 +23,7 @@
 
 
 /*!< Variable, to store number of ticks (milliseconds) in. */
-volatile static uint16_t g_time;
+uint16_t g_time;
 
 
 /* Start ticks. */

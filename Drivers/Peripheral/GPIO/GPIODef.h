@@ -8,7 +8,7 @@
   * GPIO control register addresses must be taken with "&" operation to defines
   * in device-related file. For example, for port A structure will be next:<br>
   * @code{.c}
-  * volatile static const GPIO_t GPIOA =
+  * static const GPIO_t GPIOA =
   * {
   *   &DDRA,
   *   &PORTA,
@@ -59,7 +59,7 @@
 /**
   * Port A GPIO structure instance.
   */   
-volatile static const GPIO_t GPIOA =
+static const GPIO_t GPIOA =
 {
   &DDRA,
   &PORTA,
@@ -69,7 +69,7 @@ volatile static const GPIO_t GPIOA =
 /**
   * Port B GPIO structure instance.
   */   
-volatile static const GPIO_t GPIOB =
+static const GPIO_t GPIOB =
 {
   &DDRB,
   &PORTB,
