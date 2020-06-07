@@ -4,23 +4,32 @@
   * @brief   Structures with control registers for GPIO ports
   * @version 1.0.0
   *
-  * Add instances of structures for each GPIO port to use it with GPIO library.
-  * GPIO control register addresses must be taken with "&" operation to defines
-  * in device-related file. For example, for port A structure will be next:<br>
-  * @code{.c}
-  * static const GPIO_t GPIOA =
-  * {
-  *   &DDRA,
-  *   &PORTA,
-  *   &PINA
-  * };
-  * @endcode
+  * @page driver_peripheral_gpio_def  Definitions for GPIO library
   *
-  * @note Structure instances MUST be volatile static const.
+  * @subsection Description
+  *   GPIO ports access structure instance definitions.
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  *
+  * @subsection Usage
+  *   Add instances of structures for each GPIO port to use it with GPIO 
+  *   library. GPIO control register addresses must be taken with "&" operation 
+  *   to defines in device-related file. For example, for port A structure will
+  *   be next:<br>
+  *   @code{.c}
+  *   static const GPIO_t GPIOA =
+  *   {
+  *     &DDRA,
+  *     &PORTA,
+  *     &PINA
+  *   };
+  *   @endcode
+  *
+  *   @note Structure instances MUST be static const.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -46,6 +55,7 @@
 /** @ingroup    Peripheral
   * @addtogroup GPIO
   * @brief      GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio  
   * @{
   */
 
@@ -53,6 +63,7 @@
 /** @ingroup    GPIO
   * @defgroup   GPIO_Def
   * @brief      Global structures for GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio_def  
   * @{
   */
 

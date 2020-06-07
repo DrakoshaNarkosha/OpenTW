@@ -14,6 +14,7 @@
 /** @ingroup    GPIO
   * @addtogroup GPIO_Driver
   * @brief      Global structures for GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio  
   * @{
   */
 

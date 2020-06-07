@@ -8,12 +8,15 @@
   */
 
 
+#include "iotn84a.h"
+
 #include "EEPROM.h"
 
 
 /** @ingroup    Peripheral
   * @addtogroup EEPROM
   * @brief      EEPROM driver
+  * @details    More information on page @ref driver_peripheral_eeprom  
   * @{
   */
 

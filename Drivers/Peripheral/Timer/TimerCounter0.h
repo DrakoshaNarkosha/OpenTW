@@ -4,21 +4,30 @@
   * @brief   Timer/Counter 0 driver for 8-bit AVR MCU (header)
   * @version 1.0.0
   *
-  * Low-level Timer/Counter 0 driver for 8-bit AVR MCU. This drivers is wrapper
-  * on MCU registers to give more convenient access to Timer/Counter 0 
-  * peripheral registers. 
-  * @note Only overflow mode is supported for now.
+  * @page driver_peripheral_timer_counter_0  Timer/Counter 0 driver
   *
-  * Usage:<br>
-  * 1) Allocate corresponding interrupt vector.<br>
-  * 2) Call tc0SetCounter() function.<br>
-  * 3) Call tc0SetIt() to enable corresponding interrupt.<br>
-  * 4) Call tc0SetClock() to enable timer with selected clock source.<br>
-  * 5) Handle events inside interrupt vector, if global interrupt flag is set.
+  * @subsection Description
+  *   Low-level Timer/Counter 0 driver for 8-bit AVR MCU. This drivers is 
+  *   wrapper on MCU registers to give more convenient access to Timer/Counter 
+  *   0 peripheral registers. 
+  *   
+  *   Information about types for this module may be found on
+  *   @ref driver_peripheral_timer_counter_0_types page. 
+  *  
+  *   @note Only overflow mode is supported for now.
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  *
+  * @subsection Usage
+  *   1. Allocate corresponding interrupt vector.
+  *   2. Call tc0SetCounter() function.
+  *   3. Call tc0SetIt() to enable corresponding interrupt.
+  *   4. Call tc0SetClock() to enable timer with selected clock source.
+  *   5. Handle events inside interrupt vector, if global interrupt flag is set.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -51,7 +60,8 @@
 
 /** @ingroup    Timers
   * @addtogroup Timer_0
-  * @brief      Timer 0 drivers
+  * @brief      Timer 0 driver
+  * @details    More information on page @ref driver_peripheral_timer_counter_0
   * @{
   */
 
@@ -59,6 +69,7 @@
 /** @ingroup    Timer_0
   * @defgroup   Timer_0_Driver
   * @brief      Timer 0 driver
+  * @details    More information on page @ref driver_peripheral_timer_counter_0
   * @{
   */
 

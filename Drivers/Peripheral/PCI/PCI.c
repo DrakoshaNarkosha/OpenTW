@@ -13,6 +13,7 @@
 /** @ingroup    Peripheral
   * @addtogroup PCI
   * @brief      Pin change interrupt driver
+  * @details    More information on page @ref driver_peripheral_pci  
   * @{
   */
 

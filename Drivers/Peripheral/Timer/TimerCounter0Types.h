@@ -4,9 +4,15 @@
   * @brief   Types for Timer/Counter 0 library
   * @version 1.0.0
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>
+  * @page driver_peripheral_timer_counter_0_types  Types for Timer/Counter 0 library
+  *
+  * @subsection Description
+  *   Types for Timer/Counter 0 driver library.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -43,7 +49,8 @@
 
 /** @ingroup    Timers
   * @addtogroup Timer_0
-  * @brief      Timer 0 drivers
+  * @brief      Timer 0 driver
+  * @details    More information on page @ref driver_peripheral_timer_counter_0
   * @{
   */
 
@@ -51,6 +58,7 @@
 /** @ingroup    Timer_0
   * @defgroup   Timer_0_Types
   * @brief      Types for Timer 0 driver
+  * @details    More information on page @ref driver_peripheral_timer_counter_0
   * @{
   */
 

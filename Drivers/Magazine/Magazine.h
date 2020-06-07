@@ -17,7 +17,7 @@
   *
   *   Current driver consist of settings file, hardware-related interface and
   *   application driver (current file). More information about modules may be
-  *   found in next pages:<br>
+  *   found in next pages:
   *   <table bgcolor="B0E0E6" border="5">
   *     <tr>
   *       <th>MODULE</th>

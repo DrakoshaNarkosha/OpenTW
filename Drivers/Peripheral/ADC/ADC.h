@@ -5,45 +5,54 @@
   *          (header)
   * @version 1.0.0
   *
-  * Low-level ADC driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
-  * registers to give more convenient access to ADC peripheral registers.
-  * There are two variants of usage: blocking and interrupt based. Blocking
-  * mode anticipate polling of adcReady() function in cycle, to know when
-  * measurement will be ready. With interrupt mode there is no need in polling
-  * adcReady() function.
+  * @page driver_peripheral_adc  ADC driver
+  *
+  * @subsection Description
+  *   Low-level ADC driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
+  *   registers to give more convenient access to ADC peripheral registers.
+  *   There are two variants of usage: blocking and interrupt based. Blocking
+  *   mode anticipate polling of adcReady() function in cycle, to know when
+  *   measurement will be ready. With interrupt mode there is no need in 
+  *   polling adcReady() function.
   * 
-  * @note To use interrupt method, global interrupt flag in statues register 
-  *       must be set. Also ADC interrupt must be allowed with adcSetIt()
-  *       function.
+  *   @note To use interrupt method, global interrupt flag in statues register
+  *         must be set. Also ADC interrupt must be allowed with adcSetIt()
+  *         function.
   *
-  * Usage [blocking mode]:<br>
-  * 1) Call adcInit() with initialization structure or use functions with 
-  *    adcSet prefix to setup ADC.<br>
-  *    @note After initialization structure may be freed.<br>
-  * 2) Enable ADC using adcEnable() function.<br>
-  * 3) Start measure using adcStart() function.<br>
-  * 4) Wait untill adcReady() will return true.<br>
-  * 5) Read data using adcRead() function.<br>
-  * 6) [Optional] Disable ADC using adcDisable() function.<br>
+  *   Information about types for this module may be found on
+  *   @ref driver_peripheral_adc_types page.
   *
-  * Usage [interrupt mode]:<br>
-  * 1) Call adcInit() with initialization structure or use functions with
-  *    adcSet prefix to setup ADC.
-  *    @warning [interrupt] field in initialization structure must be set to 
-  *             ADC_INTERRUPT_ENABLE or adcSetIt() must be called with 
-  *             ADC_INTERRUPT_ENABLE parameter.
-  * 2) Enable ADC using adcEnable() function.<br>
-  * 3) Allocate ADC_vect() vector to be notified about measurement finish.
-  * 4) Start measure using adcStart() function.
-  * 5) As soon as measurement will be ready and if interrupt flag would be set,
-  *    program will go to ADC_vect interrupt vector.
-  * 6) Read data using adcRead() inside ADC_vect interrupt vector or somewhere
-  *    else.
-  * 7) [Optional] Disable ADC using adcDisable() function).<br>
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>
+  * @subsection Usage
+  *   @subsubsection Blocking
+  *     1. Call adcInit() with initialization structure or use functions with
+  *        adcSet prefix to setup ADC.
+  *        @note After ADC initialization structure instance may be freed.
+  *     2. Enable ADC using adcEnable() function.
+  *     3. Start measure using adcStart() function.
+  *     4. Wait untill adcReady() will return true.
+  *     5. Read data using adcRead() function.
+  *     6. [Optional] Disable ADC using adcDisable() function.
+  *
+  *   @subsubsection Interrupt
+  *     1. Allocate ADC_vect() vector to be notified about measurement finish.
+  *     2. Call adcInit() with initialization structure or use functions with
+  *       adcSet prefix to setup ADC.
+  *        @warning [interrupt] field in initialization structure must be set 
+  *                 to ADC_INTERRUPT_ENABLE or adcSetIt() must be called with
+  *                 ADC_INTERRUPT_ENABLE parameter.
+  *     3. Enable ADC using adcEnable() function.
+  *     4. Start measure using adcStart() function.
+  *     5. As soon as measurement will be ready and if interrupt flag would be
+  *        set, program will go to ADC_vect interrupt vector.
+  *     6. Read data using adcRead() inside ADC_vect interrupt vector or 
+  *        somewhere else.
+  *     7. [Optional] Disable ADC using adcDisable() function).
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -70,6 +79,7 @@
 /** @ingroup    Peripheral
   * @addtogroup ADC
   * @brief      ADC driver
+  * @details    More information on page @ref driver_peripheral_adc
   * @{
   */
 
@@ -77,6 +87,7 @@
 /** @ingroup    ADC
   * @defgroup   ADC_Driver
   * @brief      ADC driver realization
+  * @details    More information on page @ref driver_peripheral_adc
   * @{
   */
 

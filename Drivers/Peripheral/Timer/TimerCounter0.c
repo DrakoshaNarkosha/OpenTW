@@ -13,6 +13,7 @@
 /** @ingroup    Timer_0
   * @addtogroup Timer_0_Driver
   * @brief      Timer 0 driver
+  * @details    More information on page @ref driver_peripheral_timer_counter_0
   * @{
   */
 

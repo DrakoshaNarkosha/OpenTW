@@ -4,9 +4,16 @@
   * @brief   Types for ADC library
   * @version 1.0.0
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>    
+  * @page driver_peripheral_adc_types  Types for ADC library  
+  *
+  *
+  * @subsection Description
+  *   Types for Timer/Counter 0 driver library.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -37,6 +44,7 @@
 /** @ingroup    Peripheral
   * @addtogroup ADC
   * @brief      ADC driver
+  * @details    More information on page @ref driver_peripheral_adc
   * @{
   */
 
@@ -44,6 +52,7 @@
 /** @ingroup    ADC
   * @defgroup   ADC_Types
   * @brief      Types for ADC driver
+  * @details    More information on page @ref driver_peripheral_adc_types  
   * @{
   */
 

@@ -4,22 +4,30 @@
   * @brief   PCI (pin change interrupt) driver for 8-bit AVR MCU (header)
   * @version 1.0.0  
   *
-  * Low-level PCI driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
-  * registers to give more convenient access to PCI peripheral registers.
+  * @page driver_peripheral_pci  PCI driver
+  *
+  * @subsection Description
+  *   Low-level PCI driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
+  *   registers to give more convenient access to PCI peripheral registers.
+  *
+  *   @note GPIO pin may be reconfigured in any time of program executing.
   * 
-  * Usage [blocking mode]:<br>
-  * 1) Initialize GPIO pin, using GPIO driver library.<br>
-  * 2) Allocate interrupt vector for selected input (PCINT0_vect or 
-  *    PCINT1_vect).<br>
-  * 3) Call pcieSetMode() function to enable necessary interrupts.<br>
-  * 4) Call pcieLineEnable() to enable selected pin change interrupt.<br>
-  * 5) Handle event inside interrupt vector.
+  *   Information about types for this module may be found on
+  *   @ref driver_peripheral_pci_types page.
   *
-  * @note GPIO pin may be reconfigured in any time of program executing.
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  * @subsection Usage
+  *   1. Initialize GPIO pin, using GPIO driver library.
+  *   2. Allocate interrupt vector for selected input (PCINT0_vect or 
+  *      PCINT1_vect).
+  *   3. Call pcieSetMode() function to enable necessary interrupts.
+  *   4. Call pcieLineEnable() to enable selected pin change interrupt.
+  *   5. Handle event inside interrupt vector.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -46,6 +54,7 @@
 /** @ingroup    Peripheral
   * @defgroup   PCI
   * @brief      Pin change interrupt driver
+  * @details    More information on page @ref driver_peripheral_pci
   * @{
   */
 

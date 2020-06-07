@@ -5,22 +5,52 @@
   *          (header)
   * @version 1.0.0
   *
-  * Low-level GPIO driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
-  * registers to give more convenient access to GPIO peripheral registers.
-  * Requires predefined global GPIO structures in GPIODef.h file for each
-  * port.
+  * @page driver_peripheral_gpio  GPIO driver
+  *
+  * @subsection Description
+  *   Low-level GPIO driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
+  *   registers to give more convenient access to GPIO peripheral registers.
+  *   Requires predefined global GPIO structures in GPIODef.h file for each
+  *   port.
+  *
+  *   @note GPIO pin may be reconfigured in any time of program executing.
   * 
-  * Usage:<br>
-  * 1) Allocate structure instance, related to port in GPIODef.h file.<br>
-  * 2) Initialize GPIO pin using gpioInit() function or functions with 
-  *    gpioSet prefix.<br>
-  * 3) Use all other functions with proper port and pin parameters. 
+  *   Current driver consist of types file, definition file and application 
+  *   driver (current file). More information about modules may be found in 
+  *   next pages:
+  *   <table bgcolor="B0E0E6" border="5">
+  *     <tr>
+  *       <th>MODULE</th>
+  *       <th>PAGE</th>
+  *     </tr>
   *
-  * @note GPIO pin may be reconfigured in any time of program executing.
+  *     <tr>
+  *       <th>Types</th>
+  *		  <td>@ref driver_peripheral_gpio_types</td>
+  *     </tr>
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  *     <tr>
+  *       <th>Definitions</th>
+  *		  <td>@ref driver_peripheral_gpio_def</td>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Driver</th>
+  *		  <td>@ref driver_peripheral_gpio</td>
+  *     </tr>
+  *   </table>
+
+  *
+  * @subsection Usage
+  *   1. Allocate structure instance, related to port in GPIODef.h file.
+  *   2. Initialize GPIO pin using gpioInit() function or functions with 
+  *      gpioSet prefix.
+  *   3. Use all other functions with proper port and pin parameters. 
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -47,6 +77,7 @@
 /** @ingroup    Peripheral
   * @addtogroup GPIO
   * @brief      GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio
   * @{
   */
 
@@ -54,6 +85,7 @@
 /** @ingroup    GPIO
   * @defgroup   GPIO_Driver
   * @brief      Global structures for GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio
   * @{
   */
 

@@ -4,9 +4,15 @@
   * @brief   Types for PCI (pin change interrupt) library
   * @version 1.0.0  
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  * @page driver_peripheral_pci_types  Types for PCI library
+  *
+  * @subsection Description
+  *   Types for PCI driver library.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -34,6 +40,7 @@
 /** @ingroup    Peripheral
   * @addtogroup PCI
   * @brief      PCI (pin change interrupt) driver
+  * @details    More information on page @ref driver_peripheral_pci  
   * @{
   */
 
@@ -41,6 +48,7 @@
 /** @ingroup    PCI
   * @defgroup   PCI_Types
   * @brief      Types for PCI driver
+  * @details    More information on page @ref driver_peripheral_pci  
   * @{
   */
 

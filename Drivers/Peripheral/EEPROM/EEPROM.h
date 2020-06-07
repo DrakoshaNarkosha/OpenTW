@@ -5,20 +5,26 @@
   *          driver for 8-bit AVR MCU (header)
   * @version 1.0.0
   *
-  * Low-level EEPROM driver for 8-bit AVR MCU. This drivers is wrapper on MCU
-  * registers to give more convenient access to EEPROM peripheral registers.
-  * This driver implements writing data to EEPROM with byte and buffered
-  * access.
+  * @page driver_peripheral_eeprom  EEPROM driver  
   *
-  * Call functions with eepromWrite prefix to write data to EEPROM and
-  * functions with eepromRead prefix to read data from EEPROM.
+  * @subsection Description
+  *   Low-level EEPROM driver for 8-bit AVR MCU. This drivers is wrapper on MCU
+  *   registers to give more convenient access to EEPROM peripheral registers.
+  *   This driver implements writing data to EEPROM with byte and buffered
+  *   access.
   *
-  * @warning There is no check of memory overflow inside these functions. Be
-  *          careful with addressing.
+  *   @warning There is no check of memory overflow inside these functions. Be
+  *            careful with addressing.
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>
+  *
+  * @subsection Usage
+  *   Call functions with eepromWrite prefix to write data to EEPROM and
+  *   functions with eepromRead prefix to read data from EEPROM.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -27,8 +33,6 @@
 #define EEPROM_H
 
 #include <stdint.h>
-
-#include "iotn84a.h"
 
 
 /** @addtogroup Drivers
@@ -47,6 +51,7 @@
 /** @ingroup    Peripheral
   * @defgroup   EEPROM
   * @brief      EEPROM driver
+  * @details    More information on page @ref driver_peripheral_eeprom
   * @{
   */
 

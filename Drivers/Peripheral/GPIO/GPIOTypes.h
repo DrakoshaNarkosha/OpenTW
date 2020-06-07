@@ -4,9 +4,14 @@
   * @brief   Types for GPIO library
   * @version 1.0.0
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  * @page driver_peripheral_gpio_types  Types for GPIO library
+  *
+  * @subsection Description
+  *   Types for GPIO driver library.
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -37,6 +42,7 @@
 /** @ingroup    Peripheral
   * @addtogroup GPIO
   * @brief      GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio  
   * @{
   */
 
@@ -44,6 +50,7 @@
 /** @ingroup    GPIO
   * @defgroup   GPIO_Types
   * @brief      Types for GPIO driver
+  * @details    More information on page @ref driver_peripheral_gpio_types
   * @{
   */
 
