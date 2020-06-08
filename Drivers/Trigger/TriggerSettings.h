@@ -3,6 +3,19 @@
   * @file    TriggerSettings.h
   * @brief   Settings for Trigger module
   * @version 1.0.0
+  *
+  * @page driver_trigger_settings  Trigger driver settings
+  *
+  * @subsection Description
+  *   GPIO settings for Trigger module are present here. This is platform-
+  *   related file, so content and options may be changed from platform to
+  *   platform. Only port and pin settings are present here, all other GPIO
+  *   settings must be hardcoded inside TriggerInterface.c file.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.  
   ******************************************************************************
   */
 
@@ -20,15 +33,8 @@
 
 
 /** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
   * @addtogroup Trigger
-  * @brief      Magazine handler 
+  * @brief      Trigger handler 
   * @{
   */
 
@@ -39,8 +45,6 @@
   * @{
   */
 
-#define GPIO_MODE         MODE_SIGNAL_TRIGGER    /*!< GPIO mode. */
-#define GPIO_PULL         PULL_SIGNAL_TRIGGER    /*!< GPIO pull settings. */
 #define GPIO_PORT         PORT_SIGNAL_TRIGGER    /*!< GPIO port. */
 #define GPIO_PIN          PIN_SIGNAL_TRIGGER     /*!< GPIO pin. */
 
@@ -51,11 +55,6 @@
 
 /** @}
   * End of Trigger defgroup.
-  */
-
-
-/** @}
-  * End of Peripheral defgroup.
   */
 
 

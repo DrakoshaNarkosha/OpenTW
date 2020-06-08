@@ -1,35 +1,37 @@
 /**
   ******************************************************************************
   * @file    Tick.h
-  * @brief   Milliseconds tick implementation, based on Timer/Counter 0
-  *          (header)
+  * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (header)
   * @version 1.0.0  
   *
-  * Current module gives interrupt-based API for measuring one milliseconds 
-  * ticks, based on Timer/Counter 0.
+  * @page driver_tick  Tick driver
+  *
+  * @subsection Description
+  *   Current module gives interrupt-based API for measuring one milliseconds 
+  *   ticks, based on Timer/Counter 0.
   * 
-  * @note This module is calculated for systems with 1 MHz clock source.
+  *   @note This module is calculated for systems with 1 MHz clock source.
   *
-  * @warning This module may calculate up to 65535 milliseconds, before
-  *          overflow occurs.
+  *   @warning This module may calculate up to 65535 milliseconds, before
+  *            overflow occurs.
   *
-  * Usage:<br>
-  * 1) Set global interrupts flag to true.<br>
-  * 2) Call tickStart() to start Timer/Counter 0.<br>
-  * 3) Call tickGet() to get current time, starting from tickStart() call in 
-  *    milliseconds.<br>
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  * @subsection Usage
+  *   1. Set global interrupts flag to true.
+  *   2. Call tickStart() to start Timer/Counter 0.
+  *   3. Call tickGet() to get current time, starting from tickStart() call in 
+  *      milliseconds.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
   ******************************************************************************
   */
 
 
 #ifndef TICK_H
 #define TICK_H
-
-#include "TimerCounter0.h"
 
 
 /** @addtogroup Drivers
@@ -48,6 +50,7 @@
 /** @ingroup    Peripheral
   * @defgroup   Tick
   * @brief      Tick (milliseconds) source 
+  * @details    More information on page @ref driver_tick
   * @{
   */
 

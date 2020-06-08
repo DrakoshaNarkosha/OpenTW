@@ -40,5 +40,5 @@ bool magazineIfRead(void)
 }
 
 /** @}
-  * End of Jumpers_Interface defgroup.
+  * End of Magazine_Interface defgroup.
   */

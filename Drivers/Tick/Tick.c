@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    Tick.h
+  * @file    Tick.ñ
   * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (source) 
   * @version 1.0.0  
   ******************************************************************************
@@ -9,12 +9,15 @@
 
 #include "interrupt.h"
 
+#include "TimerCounter0.h"
+
 #include "Tick.h"
 
 
 /** @ingroup    Peripheral
   * @addtogroup Tick
   * @brief      Tick (milliseconds) source 
+  * @details    More information on page @ref driver_tick
   * @{
   */
 
@@ -23,7 +26,7 @@
 
 
 /*!< Variable, to store number of ticks (milliseconds) in. */
-uint16_t g_time;
+volatile static uint16_t g_time;
 
 
 /* Start ticks. */

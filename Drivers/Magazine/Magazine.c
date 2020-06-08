@@ -20,7 +20,7 @@
   */
 
 /*!< Variable to store current magazine presence status in. */
-static bool g_magazine = false;
+volatile static bool g_magazine = false;
 
 
 /* Initialize related to Magazine module peripheral modules. */

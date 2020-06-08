@@ -10,7 +10,10 @@
   *   Current module implements interrupt-based checking of magazine presence.
   *   For proper functioning GPIO line must have external interrupt feature.
   *   Otherwise, use direct GPIO read inside cycle instead of this module. 
-  *  
+  *
+  *   @note Interrupt must react on both logic level changes: from low to high
+  *         and from high to low. Otherwise, unexpected behavior will occur.
+  *
   *   @note magazinePresent() function (for checking, is magazine is present)
   *         doesn`t perform any read operations. It only returns global state
   *         variable value.

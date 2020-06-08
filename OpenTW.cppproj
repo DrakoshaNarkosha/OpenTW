@@ -245,6 +245,12 @@
     <Compile Include="Drivers\Trigger\Trigger.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\Trigger\TriggerInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Trigger\TriggerInterface.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\Trigger\TriggerSettings.h">
       <SubType>compile</SubType>
     </Compile>
