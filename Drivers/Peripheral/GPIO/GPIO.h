@@ -177,23 +177,23 @@ void gpioPinSet(const GPIO_t* port, GPIOPin_t pin);
   */
 bool gpioRead(const GPIO_t* port, GPIOPin_t pin);
 
+/* End of GPIO_Driver defgroup */
 /** @}
-  * End of GPIO_Driver defgroup.
   */
 
 
+/* End of GPIO defgroup */
 /** @}
-  * End of GPIO defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

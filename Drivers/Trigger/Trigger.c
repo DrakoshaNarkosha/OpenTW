@@ -26,7 +26,8 @@ volatile static bool g_triggered = false;
 /* Initialize related to the Trigger module peripheral modules. */
 void triggerInit(void)
 {
-  g_triggered = !gpioRead(&GPIO_PORT, GPIO_PIN);
+  triggerIfInit();
+  g_triggered = triggerIfRead();
 }
 
 
@@ -43,6 +44,6 @@ void triggerIrqHandler(void)
   g_triggered = triggerIfRead();
 }
 
+/* End of Trigger_Driver defgroup */
 /** @}
-  * End of Trigger_Driver defgroup.
   */

@@ -1,28 +1,65 @@
 /**
   ******************************************************************************
   * @file    ShootingMode.h
-  * @brief   Implementation of Shooting Mode module (header)
-  * @version 1.0.0
+  * @brief   Shooting Mode module (header)
+  * @version 1.1.0
   *
-  * Current module implements checker of current Shooting Mode (based on AVR 
-  * PCI system). Depending on automatic mode, saved to EEPROM may switch 
-  * between [semi - full auto] and [semi - 3 burst] modes. 
+  * @page driver_shooting_mode  Shooting mode driver
+  *
+  * @subsection Description
+  *   Current module implements checker of current Shooting Mode. Depending on 
+  *   automatic mode, saved in memory, may switch between [semi - full auto] and
+  *   [semi - 3 burst] modes. 
   * 
-  * @warning If value, stored in EEPROM wouldn`t be valid, module will write
-  *          3-burst mode as automatic mode to EEPROM.
+  *   @warning If value, stored in memory wouldn`t be valid, module will write
+  *            3-burst mode as automatic mode to memory.
   *
-  * Usage:<br>
-  * 1) Put shootingModeIrqHandler() to proper interrupt handler, based on GPIO 
-  *    settings for Shooting Mode module.<br> 
-  * 2) Call shootingModeInit().<br>
-  * 3) Check current shooting mode, using shootingModeRead.<br>
+  *   Current driver consist of settings file, hardware-related interface, types
+  *   file and application driver (current file). More information about modules
+  *   may be found in next pages:
+  *   <table bgcolor="B0E0E6" border="5">
+  *     <tr>
+  *       <th>MODULE</th>
+  *       <th>PAGE</th>
+  *     </tr>
   *
-  * For reprogram, call shootingModeChange() to switch between full auto and
-  * 3-burst modes. This function also reprogram EEPROM.
+  *     <tr>
+  *       <th>Settings</th>
+  *		  <td>@ref driver_shooting_mode_settings</td>
+  *     </tr>
   *
-  * Changelog:<br>
-  * # Version 1.0.0<br>
-  *   - Initial version.<br>  
+  *     <tr>
+  *       <th>Interface</th>
+  *		  <td>@ref driver_shooting_mode_interface</td>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Types</th>
+  *		  <td>@ref driver_shooting_mode_types</td>
+  *     </tr>
+  *
+  *     <tr>
+  *       <th>Driver</th>
+  *		  <td>@ref driver_trigger</td>
+  *     </tr>
+  *   </table>
+  *
+  * @subsection Usage
+  *   1. Put shootingModeIrqHandler() to proper interrupt handler, based on 
+  *      GPIO settings for Shooting Mode module.
+  *   2. Call shootingModeInit().
+  *   3. Check current shooting mode, using shootingModeRead.
+  *
+  *   @note For reprogram, call shootingModeChange() to switch between full 
+  *         auto and 3-burst modes. This function also reprogram memory.
+  *
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.
+  * - <b><em>Version 1.1.0</em></b>
+  *     - Added Interface files to separate platform-related logic from module
+  *       implementation.
   ******************************************************************************
   */
 
@@ -40,15 +77,9 @@
 
 
 /** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
   * @addtogroup Shooting_Mode
   * @brief      Shooting Mode handler 
+  * @details    More information on page @ref driver_shooting_mode  
   * @{
   */
 
@@ -105,23 +136,18 @@ ShootingMode_t shootingModeRead(void);
   */
 void shootingModeIrqHandler(void);
 
+/* End of Shooting_Mode_Driver defgroup */
 /** @}
-  * End of Shooting_Mode_Driver defgroup.
   */
 
 
+/* End of Shooting_Mode defgroup */
 /** @}
-  * End of Shooting_Mode defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Peripheral defgroup.
-  */
-
-
-/** @}
-  * End of Drivers defgroup.
   */
 
 #endif

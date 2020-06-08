@@ -107,18 +107,18 @@ void eepromWrite(uint16_t addr, uint8_t* data, uint16_t size);
   */
 void eepromRead(uint16_t addr, uint8_t* data, uint16_t size);
 
+/* End of EEPROM defgroup */
 /** @}
-  * End of EEPROM defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

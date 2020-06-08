@@ -193,23 +193,23 @@ uint16_t adcRead();
   */                                                      
 bool adcReady();      
 
+/* End of ADC_Driver defgroup */
 /** @}
-  * End of ADC_Driver defgroup.
   */
 
 
+/* End of ADC defgroup */
 /** @}
-  * End of ADC defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

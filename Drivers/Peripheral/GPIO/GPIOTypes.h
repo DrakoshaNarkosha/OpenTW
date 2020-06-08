@@ -4,10 +4,10 @@
   * @brief   Types for GPIO library
   * @version 1.0.0
   *
-  * @page driver_peripheral_gpio_types  Types for GPIO library
+  * @page driver_peripheral_gpio_types  Types for the GPIO library
   *
   * @subsection Description
-  *   Types for GPIO driver library.
+  *   Types for the GPIO library.
   *
   * @subsection Changelog
   *   - <b><em>Version 1.0.0</em></b>
@@ -109,23 +109,23 @@ typedef struct
   volatile uint8_t*       PIN;    /*!< PIN (pin state) register (PINA, PINB, PINC, etc). */
 }GPIO_t;
 
+/* End of GPIO_Types defgroup */
 /** @}
-  * End of GPIO_Types defgroup.
   */
 
 
+/* End of GPIO defgroup */
 /** @}
-  * End of GPIO defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
  
 #endif

@@ -82,19 +82,19 @@ void pcieLineDisable(uint16_t lines);
   * @return None.
   */ 
 void pcieLineEnable(uint16_t lines);
-   
+
+/* End of PCI defgroup */
 /** @}
-  * End of PCI defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
    
 #endif

@@ -164,6 +164,12 @@
     <Compile Include="Drivers\Magazine\MagazineSettings.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\ShootingMode\ShootingModeInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\ShootingMode\ShootingModeInterface.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\ShootingMode\ShootingModeSettings.h">
       <SubType>compile</SubType>
     </Compile>

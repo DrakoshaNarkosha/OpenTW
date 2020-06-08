@@ -44,6 +44,6 @@ void magazineIrqHandler(void)
   g_magazine = magazineIfRead();
 }
 
+/* End of Magazine_Driver defgroup */
 /** @}
-  * End of Magazine_Driver defgroup.
   */

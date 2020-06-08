@@ -66,18 +66,18 @@ void jumpersIfInit(void);
   */
 bool jumpersIfRead(const void* port, uint8_t pin);
 
+/* End of Jumpers_Interface defgroup */
 /** @}
-  * End of Jumpers_Interface defgroup.
   */
 
 
+/* End of Jumpers defgroup */
 /** @}
-  * End of Jumpers defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

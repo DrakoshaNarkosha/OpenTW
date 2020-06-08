@@ -87,23 +87,23 @@ static const GPIO_t GPIOB =
   &PINB
 };
 
+/* End of GPIO_Def defgroup */
 /** @}
-  * End of GPIO_Def defgroup.
   */
 
 
+/* End of GPIO defgroup */
 /** @}
-  * End of GPIO defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

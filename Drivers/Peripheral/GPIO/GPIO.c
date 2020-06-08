@@ -58,6 +58,6 @@ bool gpioRead(const GPIO_t* port, GPIOPin_t pin)
   return *port->PIN & pin;  
 }
 
+/* End of GPIO_Driver defgroup */
 /** @}
-  * End of GPIO_Driver defgroup.
   */

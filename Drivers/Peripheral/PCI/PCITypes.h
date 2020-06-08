@@ -82,23 +82,23 @@ typedef enum
   PCI_0_1              = 0x30,          /*!< Pin change interrupt 0 and 1 are allowed.*/
 }PCI_t;
 
+/* End of PCI_Types defgroup */
 /** @}
-  * End of PCI_Types defgroup.
   */
 
 
+/* End of PCI defgroup */
 /** @}
-  * End of PCI defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

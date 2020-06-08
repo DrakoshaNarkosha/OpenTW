@@ -100,18 +100,18 @@ bool jumpers1Read(void);
   */
 bool jumpers2Read(void);
 
+/* End of Jumpers_Driver defgroup */
 /** @}
-  * End of Jumpers_Driver defgroup.
   */
 
 
+/* End of Jumpers defgroup */
 /** @}
-  * End of Jumpers defgroup.
   */
   
-  
+
+/* End of Drivers defgroup */  
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

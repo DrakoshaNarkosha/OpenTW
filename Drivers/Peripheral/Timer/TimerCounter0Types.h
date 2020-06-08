@@ -88,28 +88,28 @@ typedef enum
   TC0_IT_COMPARE_MATCH_B            = 0x04,   /*!< Output compare match B. */
 }TC0It_t;
 
+/* End of Timer_0_Types defgroup */
 /** @}
-  * End of Timer_0_Types defgroup.
   */
 
 
+/* End of Timer_0 defgroup */
 /** @}
-  * End of Timer_0 defgroup.
   */
 
 
+/* End of Timers defgroup */
 /** @}
-  * End of Timers defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

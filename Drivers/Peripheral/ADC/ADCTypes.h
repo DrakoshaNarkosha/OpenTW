@@ -145,23 +145,23 @@ typedef struct
   ADCChannel_t                        channel;                                      /*!< Measurement channel. */
 }ADCInit_t;
 
+/* End of ADC_Types defgroup */
 /** @}
-  * End of ADC_Types defgroup.
   */
 
 
+/* End of ADC defgroup */
 /** @}
-  * End of ADC defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

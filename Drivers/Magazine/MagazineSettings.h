@@ -50,18 +50,18 @@
 #define GPIO_PORT         PORT_SIGNAL_MAGAZINE    /*!< GPIO port. */
 #define GPIO_PIN          PIN_SIGNAL_MAGAZINE     /*!< GPIO pin. */
 
+/* End of Magazine_Settings defgroup */
 /** @}
-  * End of Magazine_Settings defgroup.
   */
 
 
+/* End of Magazine defgroup */
 /** @}
-  * End of Magazine defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

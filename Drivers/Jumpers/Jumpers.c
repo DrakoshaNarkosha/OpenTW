@@ -38,6 +38,6 @@ bool jumpers2Read(void)
   return jumpersIfRead(&JP2_GPIO_PORT, JP2_GPIO_PIN);  
 }
 
+/* End of Jumpers_Driver defgroup */
 /** @}
-  * End of Jumpers_Driver defgroup.
   */

@@ -42,6 +42,6 @@ bool jumpersIfRead(const void* port, uint8_t pin)
   return !gpioRead((const GPIO_t*)port, pin);
 }
 
+/* End of Jumpers_Interface defgroup */
 /** @}
-  * End of Jumpers_Interface defgroup.
   */

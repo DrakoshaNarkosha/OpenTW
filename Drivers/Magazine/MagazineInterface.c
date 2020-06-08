@@ -39,6 +39,6 @@ bool magazineIfRead(void)
   return !gpioRead(&GPIO_PORT, GPIO_PIN);
 }
 
+/* End of Magazine_Interface defgroup */
 /** @}
-  * End of Magazine_Interface defgroup.
   */

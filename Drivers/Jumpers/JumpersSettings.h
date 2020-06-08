@@ -53,18 +53,18 @@
 #define JP2_GPIO_PORT         PORT_JUMPER_2         /*!< GPIO port for jumper 2. */
 #define JP2_GPIO_PIN          PIN_JUMPER_2          /*!< GPIO pin for jumper 2. */
 
+/* End of Jumpers_Settings defgroup */
 /** @}
-  * End of Jumpers_Settings defgroup.
   */
 
 
+/* End of Jumpers defgroup */
 /** @}
-  * End of Jumpers defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

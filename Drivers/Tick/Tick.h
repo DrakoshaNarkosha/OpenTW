@@ -84,18 +84,18 @@ void tickReset(void);
   */
 uint16_t tickGet(void);
 
+/* End of Tick defgroup */
 /** @}
-  * End of Tick defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

@@ -48,18 +48,18 @@
 #define GPIO_PORT         PORT_SIGNAL_TRIGGER    /*!< GPIO port. */
 #define GPIO_PIN          PIN_SIGNAL_TRIGGER     /*!< GPIO pin. */
 
+/* End of Trigger_Settings defgroup */
 /** @}
-  * End of Trigger_Settings defgroup.
   */
 
 
+/* End of Trigger defgroup */
 /** @}
-  * End of Trigger defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

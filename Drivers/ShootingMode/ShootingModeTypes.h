@@ -1,8 +1,17 @@
 /**
   ******************************************************************************
   * @file    ShootingModeTypes.h
-  * @brief   Types for Shooting Mode module
+  * @brief   Types for Shooting Mode library
   * @version 1.0.0
+  *
+  * @page driver_shooting_mode_types  Types for the Shooting Mode library
+  *
+  * @subsection Description
+  *   Types for the Shooting Mode library.
+  *
+  * @subsection Changelog
+  *   - <b><em>Version 1.0.0</em></b>
+  *     - Initial version.  
   ******************************************************************************
   */
 
@@ -18,22 +27,17 @@
 
 
 /** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
   * @addtogroup Shooting_Mode
   * @brief      Shooting Mode handler 
+  * @details    More information on page @ref driver_shooting_mode  
   * @{
   */
 
 
-/** @ingroup    Peripheral
+/** @ingroup    Shooting_Mode
   * @defgroup   Shooting_Mode_Types
   * @brief      Shooting mode driver types
+  * @details    More information on page @ref driver_shooting_mode_types  
   * @{
   */
 
@@ -47,22 +51,18 @@ typedef enum
   SHOOTING_MODE_BURST     = 0x02, /*!< 3-burst mode. */
 }ShootingMode_t;
 
+/* End of Shooting_Mode_Types defgroup */
 /** @}
-  * End of Shooting_Mode_Types defgroup.
-  */
-
-/** @}
-  * End of Shooting_Mode defgroup.
   */
 
 
+/* End of Shooting_Mode defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

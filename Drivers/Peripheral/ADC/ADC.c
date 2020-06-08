@@ -105,6 +105,6 @@ bool adcReady()
   return ADCSRA & (1 << ADSC);
 }
 
+/* End of ADC_Driver defgroup */
 /** @}
-  * End of ADC_Driver defgroup.
   */

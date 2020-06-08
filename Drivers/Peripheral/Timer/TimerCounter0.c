@@ -39,6 +39,6 @@ void tc0SetIt(TC0It_t interrupt)
   TIMSK0 |= interrupt;
 }
 
+/* End of Timer_0_Driver defgroup */
 /** @}
-  * End of Timer_0_Driver defgroup.
   */

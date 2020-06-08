@@ -39,6 +39,6 @@ bool triggerIfRead(void)
   return !gpioRead(&GPIO_PORT, GPIO_PIN);
 }
 
+/* End of Trigger_Interface defgroup */
 /** @}
-  * End of Trigger_Interface defgroup.
   */

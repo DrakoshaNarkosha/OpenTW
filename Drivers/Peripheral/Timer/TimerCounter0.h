@@ -100,28 +100,28 @@ void tc0SetCounter(uint8_t counter);
   */
 void tc0SetIt(TC0It_t interrupt);
 
+/* End of Timer_0_Driver defgroup */
 /** @}
-  * End of Timer_0_Driver defgroup.
   */
 
 
+/* End of Timer_0 defgroup */
 /** @}
-  * End of Timer_0 defgroup.
   */
 
 
+/* End of Timers defgroup */
 /** @}
-  * End of Timers defgroup.
   */
 
 
+/* End of Peripheral defgroup */
 /** @}
-  * End of Peripheral defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

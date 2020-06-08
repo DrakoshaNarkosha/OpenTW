@@ -116,18 +116,18 @@ bool magazinePresent(void);
   */
 void magazineIrqHandler(void);
 
+/* End of Magazine_Driver defgroup */
 /** @}
-  * End of Magazine_Driver defgroup.
   */
 
 
+/* End of Magazine defgroup */
 /** @}
-  * End of Magazine defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

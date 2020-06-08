@@ -39,6 +39,6 @@ void pcieLineEnable(uint16_t lines)
   PCMSK1 |= (lines >> 8); 
 }
 
+/* End of PCI defgroup */
 /** @}
-  * End of PCI defgroup.
   */

@@ -62,18 +62,18 @@ void magazineIfInit(void);
   */
 bool magazineIfRead(void);
 
+/* End of Magazine_Interface defgroup */
 /** @}
-  * End of Magazine_Interface defgroup.
   */
 
 
+/* End of Magazine defgroup */
 /** @}
-  * End of Magazine defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif

@@ -1,22 +1,21 @@
 /**
   ******************************************************************************
   * @file    ShootingMode.c
-  * @brief   Implementation of Shooting Mode module (source)
-  * @version 1.0.0  
+  * @brief   Shooting Mode module (source)
+  * @version 1.1.0  
   ******************************************************************************
   */
 
 
-#include "EEPROM.h"
-#include "GPIO.h"
-
 #include "ShootingModeSettings.h"
+#include "ShootingModeInterface.h"
 #include "ShootingMode.h"
 
 
-/** @ingroup    Peripheral
-  * @addtogroup Shooting_Mode_Driver
-  * @brief      Shooting mode driver
+/** @ingroup    Drivers
+  * @addtogroup Shooting_Mode
+  * @brief      Shooting Mode handler 
+  * @details    More information on page @ref driver_shooting_mode  
   * @{
   */
 
@@ -27,24 +26,17 @@ ShootingMode_t g_currMode = SHOOTING_MODE_SEMI;   /*!< Current shooting mode. */
 /* Initialize related to Shooting Mode module peripheral modules. */
 void shootingModeInit(void)
 {
-  GPIOInit_t gpio =
-  {
-    .mode   = GPIO_MODE,
-    .pullUp = GPIO_PULL,
-    .pin    = GPIO_PIN,
-  };
+  shootingModeIfInit();  
   /* Read automatic mode type from EEPROM */
-  g_autoMode = eepromReadByte(EEPROM_ADDR);
+  g_autoMode = shootingModeIfMemoryRead();
   /* If read data does not match to possible automatic modes, set 3-burst mode */
   if ((g_autoMode != SHOOTING_MODE_AUTO) && (g_autoMode != SHOOTING_MODE_AUTO))
   {
     g_autoMode = SHOOTING_MODE_BURST;
-    eepromWriteByte(EEPROM_ADDR, g_autoMode);    
+    shootingModeIfMemoryWrite(g_autoMode);    
   }
-  /* Initialize GPIO line */
-  gpioInit(&GPIO_PORT, &gpio);
   /* Set current shooting mode, based on GPIO pin state */
-  g_currMode = (gpioRead(&GPIO_PORT, GPIO_PIN) ? SHOOTING_MODE_SEMI : g_autoMode);
+  g_currMode = (shootingModeIfRead() ? SHOOTING_MODE_SEMI : g_autoMode);
 }
 
 
@@ -53,7 +45,7 @@ void shootingModeChange(void)
 {
   g_autoMode = ((g_autoMode == SHOOTING_MODE_AUTO) ? SHOOTING_MODE_BURST : SHOOTING_MODE_AUTO);
   
-  eepromWriteByte(EEPROM_ADDR, g_autoMode);
+  shootingModeIfMemoryWrite(g_autoMode);
 
   if (g_currMode != SHOOTING_MODE_SEMI)
   {
@@ -72,9 +64,9 @@ ShootingMode_t shootingModeRead(void)
 /* Interrupt handler for the Shooting Mode module. */
 void shootingModeIrqHandler(void)
 {
-  g_currMode = (gpioRead(&GPIO_PORT, GPIO_PIN) ? SHOOTING_MODE_SEMI : g_autoMode);
+  g_currMode = (shootingModeIfRead() ? SHOOTING_MODE_SEMI : g_autoMode);
 }
 
+/* End of Shooting_Mode_Driver defgroup */
 /** @}
-  * End of Shooting_Mode_Driver defgroup.
   */

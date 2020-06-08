@@ -71,6 +71,6 @@ ISR(TIM0_OVF_vect)
   tc0SetCounter(COUNTER);
 }
 
+/* End of Tick defgroup */
 /** @}
-  * End of Tick defgroup.
   */

@@ -113,18 +113,18 @@ bool triggerPushed(void);
   */
 void triggerIrqHandler(void);
 
+/* End of Trigger_Driver defgroup */
 /** @}
-  * End of Trigger_Driver defgroup.
   */
 
 
+/* End of Trigger defgroup */
 /** @}
-  * End of Trigger defgroup.
   */
 
 
+/* End of Drivers defgroup */
 /** @}
-  * End of Drivers defgroup.
   */
 
 #endif
