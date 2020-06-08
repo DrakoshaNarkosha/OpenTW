@@ -54,9 +54,9 @@
   * @subsection Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
-    * - <b><em>Version 1.1.0</em></b>
-    *     - Added Interface files to separate platform-related logic from module
-    *       implementation.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Added Interface files to separate platform-related logic from module
+  *       implementation.
   ******************************************************************************
   */
 
