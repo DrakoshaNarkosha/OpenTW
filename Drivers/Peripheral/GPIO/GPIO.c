@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    GPIO.h
-  * @brief   GPIO (General Purpose Input Output) driver for 8-bit AVR MCU
+  * @brief   GPIO (General-Purpose Input/Output) driver for 8-bit AVR MCUs 
   *          (source)
   * @version 1.0.0  
   ******************************************************************************
@@ -11,10 +11,10 @@
 #include "GPIO.h"
 
 
-/** @ingroup    GPIO
-  * @addtogroup GPIO_Driver
-  * @brief      Global structures for GPIO driver
-  * @details    More information on page @ref driver_peripheral_gpio  
+/** @ingroup    drivers_peripheral_gpio
+  * @addtogroup drivers_peripheral_gpio_driver  Driver
+  * @brief      GPIO (General-Purpose Input/Output) driver
+  * @details    More information on page @ref gpio
   * @{
   */
 
@@ -58,6 +58,6 @@ bool gpioRead(const GPIO_t* port, GPIOPin_t pin)
   return *port->PIN & pin;  
 }
 
-/* End of GPIO_Driver defgroup */
+/* End of drivers_peripheral_gpio_driver defgroup */
 /** @}
   */

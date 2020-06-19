@@ -1,9 +1,9 @@
 /**
   ******************************************************************************
   * @file    ADC.c
-  * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCU
+  * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCUs
   *          (source)
-  * @version 1.0.0  
+  * @version 1.1.0  
   ******************************************************************************
   */
 
@@ -11,9 +11,10 @@
 #include "ADC.h"
 
 
-/** @ingroup    ADC
-  * @addtogroup ADC_Driver
-  * @brief      ADC driver realization
+/** @ingroup    drivers_peripheral_adc
+  * @defgroup   drivers_peripheral_adc_driver  Driver
+  * @brief      ADC (Analog to Digital Converter) driver
+  * @details    More information on page @ref adc
   * @{
   */
 
@@ -22,8 +23,8 @@ void adcInit(const ADCInit_t* init)
 {
   /*       ADPS[0:2]           ADIE[3]           ADATE[5] */
   ADCSRA = init->prescaller  | init->interrupt | ((init->autoTrigger == ADC_AUTO_TRIGGER_FREE_RUNNING) ? 0x00 : (1 << ADATE));
-  /*       ADTS[0:2]           BIN[7] */
-  ADCSRB = init->autoTrigger | init->bipolar;
+  /*       ADTS[0:2]           ADLAR[4]          BIN[7] */
+  ADCSRB = init->autoTrigger | (1 << ADLAR)    | init->bipolar;
   /*       MUX[0:5]            REFS[0:1] */
   ADMUX  = init->channel     | init->reference;  
 }
@@ -93,9 +94,9 @@ void adcStart()
 
 
 /* Read measured ADC value. */
-uint16_t adcRead()
+uint8_t adcRead()
 {   
-  return (uint16_t)ADCW;
+  return ADCH;
 }
 
 
@@ -105,6 +106,6 @@ bool adcReady()
   return ADCSRA & (1 << ADSC);
 }
 
-/* End of ADC_Driver defgroup */
+/* End of drivers_peripheral_adc_driver defgroup */
 /** @}
   */

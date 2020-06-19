@@ -70,13 +70,14 @@
       <Value>../Drivers/Peripheral/PCI</Value>
       <Value>../Drivers/Peripheral/GPIO</Value>
       <Value>../Drivers/Peripheral/ADC</Value>
-      <Value>../Drivers/Tick</Value>
       <Value>../Drivers/Jumpers</Value>
       <Value>../Drivers/BatteryMeasure</Value>
       <Value>../Drivers/Magazine</Value>
       <Value>../Drivers/FET</Value>
       <Value>../Drivers/FET/Standard</Value>
       <Value>../Drivers/ShootingMode</Value>
+      <Value>../Drivers/LightBarrier</Value>
+      <Value>../Tick</Value>
       <Value>../Application</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
@@ -141,6 +142,18 @@
     <Compile Include="Drivers\BatteryMeasure\BatteryMeasure.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasureInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasureInterface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasureSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\BatteryMeasure\BatteryMeasureTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\FET\Standard\FETStandard.c">
       <SubType>compile</SubType>
     </Compile>
@@ -171,6 +184,42 @@
     <Compile Include="Drivers\Jumpers\JumpersSettings.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Drivers\LED\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LED\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LED\LEDInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LED\LEDInterface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LED\LEDSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LightBarrier\LightBarrier.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LightBarrier\LightBarrier.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LightBarrier\LightBarrierInterface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LightBarrier\LightBarrierInterface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\LightBarrier\LightBarrierSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\Magazine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Magazine\Magazine.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Drivers\Magazine\MagazineInterface.c">
       <SubType>compile</SubType>
     </Compile>
@@ -187,18 +236,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\ShootingMode\ShootingModeSettings.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Tick\Tick.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Tick\Tick.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Magazine\Magazine.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Drivers\Magazine\Magazine.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Drivers\Peripheral\EEPROM\EEPROM.c">
@@ -270,18 +307,25 @@
     <Compile Include="Drivers\Trigger\TriggerSettings.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Tick\Tick.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tick\Tick.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Device\ATTiny84A" />
     <Folder Include="Drivers" />
     <Folder Include="Drivers\BatteryMeasure" />
-    <Folder Include="Drivers\FET" />
-    <Folder Include="Drivers\FET\Standard" />
-    <Folder Include="Drivers\Magazine" />
+    <Folder Include="Drivers\FET\" />
+    <Folder Include="Drivers\FET\Standard\" />
     <Folder Include="Drivers\Jumpers" />
+    <Folder Include="Drivers\Magazine" />
+    <Folder Include="Drivers\LightBarrier" />
+    <Folder Include="Drivers\LED" />
     <Folder Include="Drivers\Trigger" />
-    <Folder Include="Drivers\Tick" />
     <Folder Include="Drivers\Peripheral\EEPROM" />
     <Folder Include="Drivers\Peripheral\Timer" />
     <Folder Include="Drivers\ShootingMode" />
@@ -290,6 +334,7 @@
     <Folder Include="Device" />
     <Folder Include="Drivers\Peripheral\PCI" />
     <Folder Include="Drivers\Peripheral\ADC" />
+    <Folder Include="Tick\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

@@ -8,9 +8,3 @@ int main(void)
 
   }
 }
-
-
-ISR(PCINT0_vect)
-{
-  
-}

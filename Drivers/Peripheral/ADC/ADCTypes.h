@@ -1,17 +1,17 @@
 /**
   ******************************************************************************
   * @file    ADCTypes.h
-  * @brief   Types for ADC library
+  * @brief   Types for the ADC driver for 8-bit AVR MCUs
   * @version 1.0.0
   *
-  * @page driver_peripheral_adc_types  Types for ADC library  
+  * @page adc_types  ADC types
   *
   *
-  * @subsection Description
-  *   Types for Timer/Counter 0 driver library.
+  * @section adc_types_description  Description
+  *   Types for ADC driver library.
   *
   *
-  * @subsection Changelog
+  * @section adc_types_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -26,33 +26,34 @@
 #include <stdbool.h>
 
 #include "iotn84a.h"
+#include "interrupt.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup ADC
-  * @brief      ADC driver
-  * @details    More information on page @ref driver_peripheral_adc
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_adc  ADC
+  * @brief      ADC (Analog to Digital Converter) handler
+  * @details    More information on page @ref adc
   * @{
   */
 
 
-/** @ingroup    ADC
-  * @defgroup   ADC_Types
-  * @brief      Types for ADC driver
-  * @details    More information on page @ref driver_peripheral_adc_types  
+/** @ingroup    drivers_peripheral_adc
+  * @defgroup   drivers_peripheral_adc_types  Types
+  * @brief      ADC (Analog to Digital Converter) driver types
+  * @details    More information on page @ref adc_types  
   * @{
   */
 
@@ -145,22 +146,22 @@ typedef struct
   ADCChannel_t                        channel;                                      /*!< Measurement channel. */
 }ADCInit_t;
 
-/* End of ADC_Types defgroup */
+/* End of drivers_peripheral_adc_types defgroup */
 /** @}
   */
 
 
-/* End of ADC defgroup */
+/* End of drivers_peripheral_adc defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

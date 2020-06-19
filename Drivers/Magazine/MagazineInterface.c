@@ -1,20 +1,21 @@
 /**
   ******************************************************************************
   * @file    MagazineInterface.c
-  * @brief   Interface for Magazine module (source)
+  * @brief   Interface for the Magazine module (source)
   * @version 1.0.0
   ******************************************************************************
   */
 
 
+#include "PCI.h"
 #include "GPIO.h"
 
 #include "MagazineSettings.h"
 #include "MagazineInterface.h"
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Interface
+/** @ingroup    driver_magazine
+  * @addtogroup driver_magazine_interface
   * @brief      Interface for the Magazine module
   * @details    More information on page @ref driver_magazine_interface  
   * @{
@@ -30,6 +31,7 @@ void magazineIfInit(void)
     .pin    = GPIO_PIN,
   };  
   gpioInit(&GPIO_PORT, &gpio);
+  pciLineEnable(PCI_LINE);
 }
 
 
@@ -39,6 +41,6 @@ bool magazineIfRead(void)
   return !gpioRead(&GPIO_PORT, GPIO_PIN);
 }
 
-/* End of Magazine_Interface defgroup */
+/* End of driver_magazine_interface defgroup */
 /** @}
   */

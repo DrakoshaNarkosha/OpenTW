@@ -1,23 +1,20 @@
 /**
   ******************************************************************************
-  * @file    Tick.ñ
+  * @file    Tick.c
   * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (source) 
   * @version 1.0.0  
   ******************************************************************************
   */
 
 
-#include "interrupt.h"
-
 #include "TimerCounter0.h"
 
 #include "Tick.h"
 
 
-/** @ingroup    Peripheral
-  * @addtogroup Tick
+/** @defgroup   tick  Tick
   * @brief      Tick (milliseconds) source 
-  * @details    More information on page @ref driver_tick
+  * @details    More information on page @ref tick
   * @{
   */
 
@@ -71,6 +68,6 @@ ISR(TIM0_OVF_vect)
   tc0SetCounter(COUNTER);
 }
 
-/* End of Tick defgroup */
+/* End of tick defgroup */
 /** @}
   */

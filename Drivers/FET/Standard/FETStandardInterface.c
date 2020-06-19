@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    FETStandardInterface.c
-  * @brief   Interface for standard FET module (source)
+  * @brief   Interface for FET Standard module (source)
   * @version 1.0.0
   ******************************************************************************
   */
@@ -9,14 +9,14 @@
 
 #include "GPIO.h"
 
-#include "MagazineSettings.h"
-#include "MagazineInterface.h"
+#include "FETStandardSettings.h"
+#include "FETStandardInterface.h"
 
 
-/** @ingroup    FET_Standard
-  * @defgroup   FET_Standard_Interface
-  * @brief      Interface for standard FET module
-  * @details    More information on page @ref driver_fet_standard_interface
+/** @ingroup    drivers_fet_standard
+  * @addtogroup drivers_fet_standard_interface  Interface
+  * @brief      FET standard interface
+  * @details    More information on page @ref fet_standard_interface
   * @{
   */
 
@@ -50,6 +50,6 @@ void fetStandardIfSet(const void* port, uint8_t pin)
   gpioPinSet((const GPIO_t*)port, pin);  
 }
 
-/* End of FET_Standard_Interface defgroup */
+/* End of drivers_fet_standard_interface defgroup */
 /** @}
   */

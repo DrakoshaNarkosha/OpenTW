@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    Magazine.c
-  * @brief   Magazine module (source)
+  * @brief   Magazine driver (source)
   * @version 1.1.0
   ******************************************************************************
   */
@@ -12,15 +12,14 @@
 #include "Magazine.h"
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Driver
+/** @ingroup    driver_magazine
+  * @addtogroup driver_magazine_driver  Driver
   * @brief      Magazine driver
-  * @details    More information on page @ref driver_magazine  
+  * @details    More information on page @ref magazine
   * @{
   */
 
-/*!< Variable to store current magazine presence status in. */
-volatile static bool g_magazine = false;
+volatile static bool g_magazine = false;  /*!< Variable to store current magazine presence status in. */
 
 
 /* Initialize related to Magazine module peripheral modules. */
@@ -44,6 +43,6 @@ void magazineIrqHandler(void)
   g_magazine = magazineIfRead();
 }
 
-/* End of Magazine_Driver defgroup */
+/* End of driver_magazine_driver defgroup */
 /** @}
   */

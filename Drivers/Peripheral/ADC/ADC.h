@@ -1,14 +1,14 @@
 /**
   ******************************************************************************
   * @file    ADC.h
-  * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCU 
+  * @brief   ADC (Analog to Digital Converter) driver for 8-bit AVR MCUs 
   *          (header)
-  * @version 1.0.0
+  * @version 1.1.0
   *
-  * @page driver_peripheral_adc  ADC driver
+  * @page adc  ADC driver
   *
-  * @subsection Description
-  *   Low-level ADC driver for 8-bit AVR MCU. This drivers is wrapper on MCU 
+  * @section adc_description  Description
+  *   Low-level ADC driver for 8-bit AVR MCUs. This drivers is wrapper on MCU 
   *   registers to give more convenient access to ADC peripheral registers.
   *   There are two variants of usage: blocking and interrupt based. Blocking
   *   mode anticipate polling of adcReady() function in cycle, to know when
@@ -20,13 +20,14 @@
   *         function.
   *
   *   Information about types for this module may be found on
-  *   @ref driver_peripheral_adc_types page.
+  *   @ref adc_types page.
   *
   *
-  * @subsection Usage
-  *   @subsubsection Blocking
-  *     1. Call adcInit() with initialization structure or use functions with
-  *        adcSet prefix to setup ADC.
+  * @section adc_usage  Usage
+  *   @subsection adc_usage_blocking  Blocking
+  *     1. Call adcInit() with initialization structure.
+  *        @warning It is necessary to call it at least once. After that set
+  *                 functions may be used.
   *        @note After ADC initialization structure instance may be freed.
   *     2. Enable ADC using adcEnable() function.
   *     3. Start measure using adcStart() function.
@@ -34,10 +35,11 @@
   *     5. Read data using adcRead() function.
   *     6. [Optional] Disable ADC using adcDisable() function.
   *
-  *   @subsubsection Interrupt
+  *   @subsection adc_usage_interrupt  Interrupt
   *     1. Allocate ADC_vect() vector to be notified about measurement finish.
-  *     2. Call adcInit() with initialization structure or use functions with
-  *       adcSet prefix to setup ADC.
+  *     2. Call adcInit() with initialization structure.
+  *        @warning It is necessary to call it at least once. After that set
+  *                 functions may be used.  
   *        @warning [interrupt] field in initialization structure must be set 
   *                 to ADC_INTERRUPT_ENABLE or adcSetIt() must be called with
   *                 ADC_INTERRUPT_ENABLE parameter.
@@ -50,9 +52,11 @@
   *     7. [Optional] Disable ADC using adcDisable() function).
   *
   *
-  * @subsection Changelog
+  * @section adc_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Changed ADC mode from 10 bit to 8 bit.
   ******************************************************************************
   */
 
@@ -63,31 +67,31 @@
 #include "ADCTypes.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup ADC
-  * @brief      ADC driver
-  * @details    More information on page @ref driver_peripheral_adc
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_adc  ADC
+  * @brief      ADC (Analog to Digital Converter) handler
+  * @details    More information on page @ref adc
   * @{
   */
 
 
-/** @ingroup    ADC
-  * @defgroup   ADC_Driver
-  * @brief      ADC driver realization
-  * @details    More information on page @ref driver_peripheral_adc
+/** @ingroup    drivers_peripheral_adc
+  * @defgroup   drivers_peripheral_adc_driver  Driver
+  * @brief      ADC (Analog to Digital Converter) driver
+  * @details    More information on page @ref adc
   * @{
   */
 
@@ -180,7 +184,7 @@ void adcStart();
   *
   * @return Measured ADC value.
   */                                                      
-uint16_t adcRead();
+uint8_t adcRead();
 
 
 /** Check if ADC measurement is ready.
@@ -193,22 +197,22 @@ uint16_t adcRead();
   */                                                      
 bool adcReady();      
 
-/* End of ADC_Driver defgroup */
+/* End of drivers_peripheral_adc_driver defgroup */
 /** @}
   */
 
 
-/* End of ADC defgroup */
+/* End of drivers_peripheral_adc defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

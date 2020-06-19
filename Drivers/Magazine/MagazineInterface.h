@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
   * @file    MagazineInterface.h
-  * @brief   Interface for Magazine module (header)
+  * @brief   Interface for the Magazine module (header)
   * @version 1.0.0
   *
-  * @page driver_magazine_interface  Magazine driver interface
+  * @page magazine_interface  Magazine interface
   *
-  * @subsection Description
+  * @section magazine_interface_description  Description
   *   Current module implements platform-related hardware functions for 
   *   operations with magazine. This module must implement initialization and 
   *   magazine GPIO read function for proper functioning.
@@ -16,7 +16,7 @@
   *         signal from GPIO line must be inverted.
   *
   *
-  * @subsection Changelog
+  * @section magazine_interface_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -27,24 +27,24 @@
 #define MAGAZINE_INTERFACE_H
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Magazine
+/** @ingroup    drivers
+  * @addtogroup driver_magazine  Magazine
   * @brief      Magazine handler 
-  * @details    More information on page @ref driver_magazine  
+  * @details    More information on page @ref magazine
   * @{
   */
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Interface
-  * @brief      Interface for the Magazine module
-  * @details    More information on page @ref driver_magazine_interface  
+/** @ingroup    driver_magazine
+  * @defgroup   driver_magazine_interface  Interface
+  * @brief      Magazine module interface
+  * @details    More information on page @ref magazine_interface  
   * @{
   */
 
@@ -62,17 +62,17 @@ void magazineIfInit(void);
   */
 bool magazineIfRead(void);
 
-/* End of Magazine_Interface defgroup */
+/* End of driver_magazine_interface defgroup */
 /** @}
   */
 
 
-/* End of Magazine defgroup */
+/* End of driver_magazine defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

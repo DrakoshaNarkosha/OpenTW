@@ -1,21 +1,23 @@
 /**
   ******************************************************************************
   * @file    MagazineSettings.h
-  * @brief   Settings for Magazine module
+  * @brief   Settings for the Magazine module
   * @version 1.0.0
   *
-  * @page driver_magazine_settings  Magazine driver settings
+  * @page magazine_settings  Magazine settings
   *
-  * @subsection Description
+  * @section magazine_settings_description  Description
   *   GPIO settings for Magazine module are present here. This is platform-
   *   related file, so content and options may be changed from platform to
   *   platform. Only port and pin settings are present here, all other GPIO
   *   settings must be hardcoded inside MagazineInterface.c file.
   *
   *
-  * @subsection Changelog
+  * @section magazine_settings_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Added PCI_LINE setting.  
   ******************************************************************************
   */
 
@@ -26,41 +28,42 @@
 #include "Pinout.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Magazine
+/** @ingroup    drivers
+  * @addtogroup driver_magazine  Magazine
   * @brief      Magazine handler 
-  * @details    More information on page @ref driver_magazine
+  * @details    More information on page @ref magazine
   * @{
   */
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Settings
-  * @brief      Settings for Magazine module
-  * @details    More information on page @ref driver_magazine_settings  
+/** @ingroup    driver_magazine
+  * @defgroup   driver_magazine_settings  Settings
+  * @brief      Magazine module settings
+  * @details    More information on page @ref magazine_settings
   * @{
   */
 
-#define GPIO_PORT         PORT_SIGNAL_MAGAZINE    /*!< GPIO port. */
-#define GPIO_PIN          PIN_SIGNAL_MAGAZINE     /*!< GPIO pin. */
+#define GPIO_PORT         PORT_SIGNAL_MAGAZINE      /*!< GPIO port. */
+#define GPIO_PIN          PIN_SIGNAL_MAGAZINE       /*!< GPIO pin. */
+#define PCI_LINE          PCI_LINE_SIGNAL_MAGAZINE  /*!< PCI line. */
 
-/* End of Magazine_Settings defgroup */
+/* End of driver_magazine_settings defgroup */
 /** @}
   */
 
 
-/* End of Magazine defgroup */
+/* End of driver_magazine defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

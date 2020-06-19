@@ -1,15 +1,16 @@
 /**
   ******************************************************************************
   * @file    GPIOTypes.h
-  * @brief   Types for GPIO library
+  * @brief   Types for the GPIO driver for 8-bit AVR MCUs
   * @version 1.0.0
   *
-  * @page driver_peripheral_gpio_types  Types for the GPIO library
+  * @page gpio_types  GPIO types
   *
-  * @subsection Description
-  *   Types for the GPIO library.
+  * @section gpio_types_description  Description
+  *   Types for the GPIO driver library.
   *
-  * @subsection Changelog
+  *
+  * @section gpio_types_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -26,31 +27,31 @@
 #include "iotn84a.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup GPIO
-  * @brief      GPIO driver
-  * @details    More information on page @ref driver_peripheral_gpio  
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_gpio  GPIO
+  * @brief      GPIO (General-Purpose Input/Output) handler
+  * @details    More information on page @ref gpio
   * @{
   */
 
 
-/** @ingroup    GPIO
-  * @defgroup   GPIO_Types
-  * @brief      Types for GPIO driver
-  * @details    More information on page @ref driver_peripheral_gpio_types
+/** @ingroup    drivers_peripheral_gpio
+  * @defgroup   drivers_peripheral_gpio_types  Types
+  * @brief      GPIO (General-Purpose Input/Output) driver types
+  * @details    More information on page @ref gpio_types  
   * @{
   */
 
@@ -109,22 +110,22 @@ typedef struct
   volatile uint8_t*       PIN;    /*!< PIN (pin state) register (PINA, PINB, PINC, etc). */
 }GPIO_t;
 
-/* End of GPIO_Types defgroup */
+/* End of drivers_peripheral_gpio_types defgroup */
 /** @}
   */
 
 
-/* End of GPIO defgroup */
+/* End of drivers_peripheral_gpio defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
  

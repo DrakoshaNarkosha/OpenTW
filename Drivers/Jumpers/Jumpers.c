@@ -12,9 +12,9 @@
 #include "Jumpers.h"
 
 
-/** @ingroup    Jumpers
-  * @defgroup   Jumpers_Driver
-  * @brief      Jumpers driver.
+/** @ingroup    driver_jumpers
+  * @addtogroup driver_jumpers_driver  Driver
+  * @brief      Jumpers driver
   * @details    More information on page @ref driver_jumpers
   * @{
   */
@@ -38,6 +38,6 @@ bool jumpers2Read(void)
   return jumpersIfRead(&JP2_GPIO_PORT, JP2_GPIO_PIN);  
 }
 
-/* End of Jumpers_Driver defgroup */
+/* End of driver_jumpers_driver defgroup */
 /** @}
   */

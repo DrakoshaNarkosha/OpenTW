@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
   * @file    TimerCounter0Types.h
-  * @brief   Types for Timer/Counter 0 library
+  * @brief   Types for the Timer/Counter 0 driver for 8-bit AVR MCUs
   * @version 1.0.0
   *
-  * @page driver_peripheral_timer_counter_0_types  Types for Timer/Counter 0 library
+  * @page timer_counter_0_types  Timer/Counter 0 types
   *
-  * @subsection Description
-  *   Types for Timer/Counter 0 driver library.
+  * @section timer_counter_0_types_description  Description
+  *   Types for the Timer/Counter 0 driver library.
   *
   *
-  * @subsection Changelog
+  * @section timer_counter_0_types_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -25,40 +25,41 @@
 #include <stdbool.h>
 
 #include "iotn84a.h"
+#include "interrupt.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup Timers
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_timers  Timers
   * @brief      Timers drivers
   * @{
   */
 
 
-/** @ingroup    Timers
-  * @addtogroup Timer_0
-  * @brief      Timer 0 driver
-  * @details    More information on page @ref driver_peripheral_timer_counter_0
+/** @ingroup    drivers_peripheral_timers
+  * @addtogroup drivers_peripheral_timers_timer_0  Timer\Counter 0
+  * @brief      Timer/Counter 0 handler
+  * @details    More information on page @ref timer_counter_0
   * @{
   */
 
 
-/** @ingroup    Timer_0
-  * @defgroup   Timer_0_Types
-  * @brief      Types for Timer 0 driver
-  * @details    More information on page @ref driver_peripheral_timer_counter_0
+/** @ingroup    drivers_peripheral_timers_timer_0
+  * @defgroup   drivers_peripheral_timers_timer_0_types  Types
+  * @brief      Timer/Counter 0 driver types
+  * @details    More information on page @ref timer_counter_0_types
   * @{
   */
 
@@ -88,27 +89,27 @@ typedef enum
   TC0_IT_COMPARE_MATCH_B            = 0x04,   /*!< Output compare match B. */
 }TC0It_t;
 
-/* End of Timer_0_Types defgroup */
+/* End of drivers_peripheral_timers_timer_0_types defgroup */
 /** @}
   */
 
 
-/* End of Timer_0 defgroup */
+/* End of drivers_peripheral_timers_timer_0 defgroup */
 /** @}
   */
 
 
-/* End of Timers defgroup */
+/* End of drivers_peripheral_timer defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

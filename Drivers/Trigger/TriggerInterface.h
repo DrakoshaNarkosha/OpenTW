@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
   * @file    TriggerInterface.h
-  * @brief   Interface for Trigger module (header)
-  * @version 1.0.0
+  * @brief   Interface for Trigger driver (header)
+  * @version 1.1.0
   *
-  * @page driver_trigger_interface  Trigger driver interface
+  * @page trigger_interface  Trigger interface
   *
-  * @subsection Description
+  * @section trigger_interface_description  Description
   *   Current module implements platform-related hardware functions for 
   *   operations with trigger. This module must implement initialization and 
   *   trigger GPIO read function for proper functioning.
@@ -16,9 +16,11 @@
   *         signal from GPIO line must be inverted.
   *
   *
-  * @subsection Changelog
+  * @section trigger_interface_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Added PCI line interrupt enabling.
   ******************************************************************************
   */
 
@@ -27,24 +29,24 @@
 #define TRIGGER_INTERFACE_H
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Trigger
-  * @brief      Trigger handler 
-  * @details    More information on page @ref driver_trigger  
+/** @ingroup    drivers
+  * @addtogroup drivers_trigger  Trigger
+  * @brief      Fire trigger handler
+  * @details    More information on page @ref trigger  
   * @{
   */
 
 
-/** @ingroup    Trigger
-  * @defgroup   Trigger_Interface
-  * @brief      Interface for the Trigger module
-  * @details    More information on page @ref driver_trigger_interface  
+/** @ingroup    drivers_trigger
+  * @defgroup   drivers_trigger_interface  Interface
+  * @brief      Fire trigger module interface
+  * @details    More information on page @ref trigger_interface  
   * @{
   */
 
@@ -62,17 +64,17 @@ void triggerIfInit(void);
   */
 bool triggerIfRead(void);
 
-/* End of Trigger_Interface defgroup */
+/* End of drivers_trigger_interface defgroup */
 /** @}
   */
 
 
-/* End of Trigger defgroup */
+/* End of drivers_trigger defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

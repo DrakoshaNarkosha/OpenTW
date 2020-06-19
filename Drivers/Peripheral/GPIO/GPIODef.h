@@ -1,16 +1,16 @@
 /**
   ******************************************************************************
   * @file    GPIODef.h
-  * @brief   Structures with control registers for GPIO ports
+  * @brief   Control register structures for the GPIO ports for 8-bit AVR MCUs 
   * @version 1.0.0
   *
-  * @page driver_peripheral_gpio_def  Definitions for GPIO library
+  * @page gpio_def  GPIO definitions
   *
-  * @subsection Description
-  *   GPIO ports access structure instance definitions.
+  * @section gpio_def_description  Description
+  *   GPIO ports access structure instances definition.
   *
   *
-  * @subsection Usage
+  * @section gpio_def_usage  Usage
   *   Add instances of structures for each GPIO port to use it with GPIO 
   *   library. GPIO control register addresses must be taken with "&" operation 
   *   to defines in device-related file. For example, for port A structure will
@@ -27,7 +27,7 @@
   *   @note Structure instances MUST be static const.
   *
   *
-  * @subsection Changelog
+  * @section gpio_def_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -39,31 +39,31 @@
 #include "GPIOTypes.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup GPIO
-  * @brief      GPIO driver
-  * @details    More information on page @ref driver_peripheral_gpio  
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_gpio  GPIO
+  * @brief      GPIO (General-Purpose Input/Output) handler
+  * @details    More information on page @ref gpio
   * @{
   */
 
 
-/** @ingroup    GPIO
-  * @defgroup   GPIO_Def
-  * @brief      Global structures for GPIO driver
-  * @details    More information on page @ref driver_peripheral_gpio_def  
+/** @ingroup    drivers_peripheral_gpio
+  * @defgroup   drivers_peripheral_gpio_def  Definitions
+  * @brief      GPIO driver ports definition
+  * @details    More information on page @ref gpio_def
   * @{
   */
 
@@ -87,22 +87,22 @@ static const GPIO_t GPIOB =
   &PINB
 };
 
-/* End of GPIO_Def defgroup */
+/* End of drivers_peripheral_gpio_def defgroup */
 /** @}
   */
 
 
-/* End of GPIO defgroup */
+/* End of drivers_peripheral_gpio defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

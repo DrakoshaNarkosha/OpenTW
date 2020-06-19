@@ -4,15 +4,15 @@
   * @brief   Standard FET module (header)
   * @version 1.0.0
   *
-  * @page driver_fet_standard  Magazine driver
+  * @page fet_standard  Standard FET driver
   *
-  * @subsection Description
+  * @section fet_standard_description  Description
   *   Current module implements access to standard FET GPIO lines for turning
   *   corresponding FET on or off.
   *
-  *   @warning Current driver doesn`t have any check logic, so user MUST
-  *            control FET states manually to avoid turning on both FETs.
-  *            Turning on both FETs will destroy the device.
+  *   @warning Current driver doesn`t have any check logic, so user MUST control
+  *            FET states manually to avoid turning on both FETs. Turning on 
+  *            both FETs will destroy the device.
   *
   *   Current driver consist of settings file, hardware-related interface and
   *   application driver (current file). More information about modules may be
@@ -25,27 +25,27 @@
   *
   *     <tr>
   *       <th>Settings</th>
-  *		  <td>@ref driver_fet_standard_settings</td>
+  *		  <td>@ref fet_standard_settings</td>
   *     </tr>
   *
   *     <tr>
   *       <th>Interface</th>
-  *		  <td>@ref driver_fet_standard_interface</td>
+  *		  <td>@ref fet_standard_interface</td>
   *     </tr>
   *
   *     <tr>
   *       <th>Driver</th>
-  *		  <td>@ref driver_fet_standard</td>
+  *		  <td>@ref fet_standard</td>
   *     </tr>
   *   </table>  
   *
   *
-  * @subsection Usage
+  * @section fet_standard_usage  Usage
   *   1. Call fetStandardInit().
-  *   2. Carefully use all other functions function.
+  *   2. Carefully use all other functions.
   *
   *
-  * @subsection Changelog
+  * @section fet_standard_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -56,31 +56,31 @@
 #define FET_STANDARD_H
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup FET
+/** @ingroup    drivers
+  * @addtogroup drivers_fet  FET
   * @brief      FET drivers 
   * @{
   */
 
 
-/** @ingroup    FET
-  * @addtogroup FET_Standard
-  * @brief      Standard FET driver
-  * @details    More information on page @ref driver_fet_standard
+/** @ingroup    drivers_fet
+  * @addtogroup drivers_fet_standard  Standard
+  * @brief      Standard FET handler 
+  * @details    More information on page @ref fet_standard
   * @{
   */
 
 
-/** @ingroup    FET_Standard
-  * @defgroup   FET_Standard_Driver
+/** @ingroup    drivers_fet_standard
+  * @defgroup   drivers_fet_standard_driver  Driver
   * @brief      Standard FET driver
-  * @details    More information on page @ref driver_fet_standard
+  * @details    More information on page @ref fet_standard
   * @{
   */
 
@@ -116,22 +116,22 @@ void fetStandardPositiveOff(void);
   */
 void fetStandardPositiveOn(void);
 
-/* End of FET_Standard_Driver defgroup */
+/* End of drivers_fet_standard_driver defgroup */
 /** @}
   */
 
 
-/* End of FET_Standard defgroup */
+/* End of drivers_fet_standard defgroup */
 /** @}
   */
 
 
-/* End of FET defgroup */
+/* End of drivers_fet defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
   * @file    Magazine.h
-  * @brief   Magazine module (header)
+  * @brief   Magazine driver (header)
   * @version 1.1.0
   *
-  * @page driver_magazine  Magazine driver
+  * @page magazine  Magazine driver
   *
-  * @subsection Description
+  * @section magazine_description  Description
   *   Current module implements interrupt-based checking of magazine presence.
   *   For proper functioning GPIO line must have external interrupt feature.
   *   Otherwise, use direct GPIO read inside cycle instead of this module. 
@@ -29,29 +29,29 @@
   *
   *     <tr>
   *       <th>Settings</th>
-  *		  <td>@ref driver_magazine_settings</td>
+  *		    <td>@ref magazine_settings</td>
   *     </tr>
   *
   *     <tr>
   *       <th>Interface</th>
-  *		  <td>@ref driver_magazine_interface</td>
+  *		    <td>@ref magazine_interface</td>
   *     </tr>
   *
   *     <tr>
   *       <th>Driver</th>
-  *		  <td>@ref driver_magazine</td>
+  *		    <td>@ref magazine</td>
   *     </tr>
-  *   </table>  
+  *   </table>
   *
   *
-  * @subsection Usage
+  * @section magazine_usage  Usage
   *   1. Put magazineIrqHandler() to proper interrupt handler, based on GPIO
   *      settings for Magazine module.
   *   2. Call magazineInit().
   *   3. Check if magazine is present, using magazinePresent() function.
   *
   *
-  * @subsection Changelog
+  * @section magazine_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   *   - <b><em>Version 1.1.0</em></b>
@@ -67,24 +67,24 @@
 #include <stdbool.h>
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Magazine
+/** @ingroup    drivers
+  * @addtogroup driver_magazine  Magazine
   * @brief      Magazine handler 
-  * @details    More information on page @ref driver_magazine  
+  * @details    More information on page @ref magazine  
   * @{
   */
 
 
-/** @ingroup    Magazine
-  * @defgroup   Magazine_Driver
+/** @ingroup    driver_magazine
+  * @defgroup   driver_magazine_driver  Driver
   * @brief      Magazine driver
-  * @details    More information on page @ref driver_magazine  
+  * @details    More information on page @ref magazine
   * @{
   */
 
@@ -116,17 +116,17 @@ bool magazinePresent(void);
   */
 void magazineIrqHandler(void);
 
-/* End of Magazine_Driver defgroup */
+/* End of driver_magazine_driver defgroup */
 /** @}
   */
 
 
-/* End of Magazine defgroup */
+/* End of driver_magazine defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

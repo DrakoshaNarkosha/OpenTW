@@ -1,12 +1,13 @@
 /**
   ******************************************************************************
   * @file    ShootingModeInterface.c
-  * @brief   Interface for the Shooting Mode module (source)
+  * @brief   Interface for Shooting Mode module (source)
   * @version 1.0.0
   ******************************************************************************
   */
 
 
+#include "PCI.h"
 #include "GPIO.h"
 #include "EEPROM.h"
 
@@ -14,10 +15,10 @@
 #include "ShootingModeInterface.h"
 
 
-/** @ingroup    Shooting_Mode
-  * @defgroup   Shooting_Mode_Interface
-  * @brief      Interface for the Shooting Mode module
-  * @details    More information on page @ref driver_shooting_mode_interface  
+/** @ingroup    drivers_shooting_mode
+  * @addtogroup drivers_shooting_mode_interface  Interface
+  * @brief      Shooting Mode module interface
+  * @details    More information on page @ref shooting_mode_interface  
   * @{
   */
 
@@ -31,6 +32,7 @@ void shootingModeIfInit(void)
     .pin    = GPIO_PIN,
   };  
   gpioInit(&GPIO_PORT, &gpio);
+  pciLineEnable(PCI_LINE);
 }
 
 
@@ -53,6 +55,6 @@ void shootingModeIfMemoryWrite(ShootingMode_t mode)
   eepromWriteByte(EEPROM_ADDR, mode);
 }
 
-/* End of Shooting_Mode_Interface defgroup */
+/* End of drivers_shooting_mode_interface defgroup */
 /** @}
   */

@@ -2,56 +2,47 @@
 #define PINOUT_H
 
 #include "GPIODef.h"
+#include "PCITypes.h"
 
 
 #ifdef HW_V1
 
-#define PORT_JUMPER_1           GPIOA
-#define PIN_JUMPER_1            GPIO_PIN_0
+#define PORT_JUMPER_1                      GPIOA
+#define PIN_JUMPER_1                       GPIO_PIN_0
 
-#define PORT_JUMPER_2           GPIOA
-#define PIN_JUMPER_2            GPIO_PIN_1
+#define PORT_JUMPER_2                      GPIOA
+#define PIN_JUMPER_2                       GPIO_PIN_1
 
-#define PORT_SIGNAL_MAGAZINE    GPIOA
-#define PIN_SIGNAL_MAGAZINE     GPIO_PIN_5
-#define MODE_SIGNAL_MAGAZINE    GPIO_MODE_INPUT
-#define PULL_SIGNAL_MAGAZINE    GPIO_PULL_UP_ENABLE
+#define PORT_BATTERY                       GPIOA
+#define PIN_BATTERY                        GPIO_PIN_7
 
-#define PORT_SIGNAL_TRIGGER     GPIOB
-#define PIN_SIGNAL_TRIGGER      GPIO_PIN_1
-#define MODE_SIGNAL_TRIGGER     GPIO_MODE_INPUT
-#define PULL_SIGNAL_TRIGGER     GPIO_PULL_UP_ENABLE
+#define PORT_SIGNAL_MAGAZINE               GPIOA
+#define PIN_SIGNAL_MAGAZINE                GPIO_PIN_5
+#define PCI_LINE_SIGNAL_MAGAZINE           PCI_LINE_5
 
-#define PORT_SIGNAL_MODE        GPIOB
-#define PIN_SIGNAL_MODE         GPIO_PIN_2
-#define MODE_SIGNAL_MODE        GPIO_MODE_INPUT
-#define PULL_SIGNAL_MODE        GPIO_PULL_UP_ENABLE
+#define PORT_SIGNAL_TRIGGER                GPIOB
+#define PIN_SIGNAL_TRIGGER                 GPIO_PIN_1
+#define PCI_LINE_SIGNAL_TRIGGER            PCI_LINE_9
 
-#define PORT_BATTERY            GPIOA
-#define PIN_BATTERY             GPIO_PIN_7
-#define MODE_BATTERY            GPIO_MODE_INPUT
-#define PULL_BATTERY            GPIO_PULL_UP_DISABLE
+#define PORT_SIGNAL_MODE                   GPIOB
+#define PIN_SIGNAL_MODE                    GPIO_PIN_2
+#define PCI_LINE_SIGNAL_MODE               PCI_LINE_10
 
-#define PORT_LIGTH_BARIER_IN    GPIOA
-#define PIN_LIGTH_BARIER_IN     GPIO_PIN_3
-#define MODE_LIGTH_BARIER_IN    GPIO_MODE_INPUT
-#define PULL_LIGTH_BARIER_IN    GPIO_PULL_UP_ENABLE
+#define PORT_SIGNAL_LIGTH_BARIER_OPT        GPIOA
+#define PIN_SIGNAL_LIGTH_BARIER_OPT         GPIO_PIN_3
+#define PCI_LINE_SIGNAL_LIGTH_BARIER_OPT    PCI_LINE_3
 
-#define PORT_LIGTH_BARIER_OUT   GPIOA
-#define PIN_LIGTH_BARIER_OUT    GPIO_PIN_2
-#define MODE_LIGTH_BARIER_OUT   GPIO_MODE_OUTPUT
-#define PULL_LIGTH_BARIER_OUT   GPIO_PULL_UP_DISABLE
+#define PORT_LIGTH_BARIER_LED               GPIOA
+#define PIN_LIGTH_BARIER_LED                GPIO_PIN_2
 
-#define PORT_FET_POSITIVE_SCL   GPIOA
-#define PIN_FET_POSITIVE_SCL    GPIO_PIN_4
+#define PORT_FET_POSITIVE_SCL               GPIOA
+#define PIN_FET_POSITIVE_SCL                GPIO_PIN_4
 
-#define PORT_FET_NEGATIVE_SDA   GPIOA
-#define PIN_FET_NEGATIVE_SDA    GPIO_PIN_6
+#define PORT_FET_NEGATIVE_SDA               GPIOA
+#define PIN_FET_NEGATIVE_SDA                GPIO_PIN_6
 
-#define PORT_LED                GPIOB
-#define PIN_LED                 GPIO_PIN_0
-#define MODE_LED                GPIO_MODE_OUTPUT
-#define PULL_LED                GPIO_PULL_UP_DISABLE
+#define PORT_LED                            GPIOB
+#define PIN_LED                             GPIO_PIN_0
 
 #endif
 

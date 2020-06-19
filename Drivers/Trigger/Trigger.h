@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
   * @file    Trigger.h
-  * @brief   Implementation of Trigger module (header)
+  * @brief   Trigger driver (header)
   * @version 1.1.0
   *
-  * @page driver_trigger  Trigger driver
+  * @page trigger  Trigger driver
   *
-  * @subsection Description
+  * @section trigger_description  Description
   *   Current module implements interrupt-based checking is trigger pressed.
   *   For proper functioning GPIO line must have external interrupt feature.
   *   Otherwise, use direct GPIO read inside cycle instead of this module.
@@ -29,32 +29,32 @@
   *
   *     <tr>
   *       <th>Settings</th>
-  *		  <td>@ref driver_trigger_settings</td>
+  *		  <td>@ref trigger_settings</td>
   *     </tr>
   *
   *     <tr>
   *       <th>Interface</th>
-  *		  <td>@ref driver_trigger_interface</td>
+  *		  <td>@ref trigger_interface</td>
   *     </tr>
-  *
+  *  
   *     <tr>
   *       <th>Driver</th>
-  *		  <td>@ref driver_trigger</td>
+  *		  <td>@ref trigger</td>
   *     </tr>
   *   </table>
   *
   *
-  * @subsection Usage
+  * @section trigger_usage  Usage
   *   1. Put triggerIrqHandler() to proper interrupt handler, based on GPIO
   *      settings for Trigger module.
   *   2. Call triggerInit().
   *   3. Check if trigger is pushed, using triggerPushed() function.
   *
   *
-  * @subsection Changelog
+  * @section trigger_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
-  * - <b><em>Version 1.1.0</em></b>
+  *   - <b><em>Version 1.1.0</em></b>
   *     - Added Interface files to separate platform-related logic from module
   *       implementation.
   ******************************************************************************
@@ -65,23 +65,24 @@
 #define TRIGGER_H
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Trigger
-  * @brief      Trigger handler 
+/** @ingroup    drivers
+  * @addtogroup drivers_trigger  Trigger
+  * @brief      Fire trigger handler
+  * @details    More information on page @ref trigger  
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @defgroup   Trigger_Driver
-  * @brief      Trigger driver
-  * @details    More information on page @ref driver_trigger  
+/** @ingroup    drivers_trigger
+  * @defgroup   drivers_trigger_driver  Driver
+  * @brief      Fire trigger driver
+  * @details    More information on page @ref trigger  
   * @{
   */
 
@@ -113,17 +114,17 @@ bool triggerPushed(void);
   */
 void triggerIrqHandler(void);
 
-/* End of Trigger_Driver defgroup */
+/* End of drivers_trigger_driver defgroup */
 /** @}
   */
 
 
-/* End of Trigger defgroup */
+/* End of drivers_trigger defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

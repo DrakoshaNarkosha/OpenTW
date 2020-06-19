@@ -1,23 +1,23 @@
 /**
   ******************************************************************************
   * @file    TimerCounter0.h
-  * @brief   Timer/Counter 0 driver for 8-bit AVR MCU (header)
+  * @brief   Timer/Counter 0 driver for 8-bit AVR MCUs (header)
   * @version 1.0.0
   *
-  * @page driver_peripheral_timer_counter_0  Timer/Counter 0 driver
+  * @page timer_counter_0  Timer/Counter 0 driver
   *
-  * @subsection Description
-  *   Low-level Timer/Counter 0 driver for 8-bit AVR MCU. This drivers is 
+  * @section timer_counter_0_description  Description
+  *   Low-level Timer/Counter 0 driver for 8-bit AVR MCUs. This drivers is 
   *   wrapper on MCU registers to give more convenient access to Timer/Counter 
   *   0 peripheral registers. 
   *   
   *   Information about types for this module may be found on
-  *   @ref driver_peripheral_timer_counter_0_types page. 
+  *   @ref timer_counter_0_types page. 
   *  
   *   @note Only overflow mode is supported for now.
   *
   *
-  * @subsection Usage
+  * @section timer_counter_0_usage  Usage
   *   1. Allocate corresponding interrupt vector.
   *   2. Call tc0SetCounter() function.
   *   3. Call tc0SetIt() to enable corresponding interrupt.
@@ -25,7 +25,7 @@
   *   5. Handle events inside interrupt vector, if global interrupt flag is set.
   *
   *
-  * @subsection Changelog
+  * @section timer_counter_0_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -38,38 +38,38 @@
 #include "TimerCounter0Types.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @addtogroup Timers
+/** @ingroup    drivers_peripheral
+  * @addtogroup drivers_peripheral_timers  Timers
   * @brief      Timers drivers
   * @{
   */
 
 
-/** @ingroup    Timers
-  * @addtogroup Timer_0
-  * @brief      Timer 0 driver
-  * @details    More information on page @ref driver_peripheral_timer_counter_0
+/** @ingroup    drivers_peripheral_timers
+  * @addtogroup drivers_peripheral_timers_timer_0  Timer\Counter 0
+  * @brief      Timer/Counter 0 handler
+  * @details    More information on page @ref timer_counter_0
   * @{
   */
 
 
-/** @ingroup    Timer_0
-  * @defgroup   Timer_0_Driver
-  * @brief      Timer 0 driver
-  * @details    More information on page @ref driver_peripheral_timer_counter_0
+/** @ingroup    drivers_peripheral_timers_timer_0
+  * @defgroup   drivers_peripheral_timers_timer_0_driver  Driver
+  * @brief      Timer/Counter 0 driver
+  * @details    More information on page @ref timer_counter_0
   * @{
   */
 
@@ -100,27 +100,27 @@ void tc0SetCounter(uint8_t counter);
   */
 void tc0SetIt(TC0It_t interrupt);
 
-/* End of Timer_0_Driver defgroup */
+/* End of drivers_peripheral_timers_timer_0_driver defgroup */
 /** @}
   */
 
 
-/* End of Timer_0 defgroup */
+/* End of drivers_peripheral_timers_timer_0 defgroup */
 /** @}
   */
 
 
-/* End of Timers defgroup */
+/* End of drivers_peripheral_timers defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

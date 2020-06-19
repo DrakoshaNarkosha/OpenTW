@@ -1,22 +1,23 @@
 /**
   ******************************************************************************
   * @file    TriggerInterface.c
-  * @brief   Interface for Trigger module (source)
-  * @version 1.0.0
+  * @brief   Interface for Trigger driver (source)
+  * @version 1.1.0
   ******************************************************************************
   */
 
 
 #include "GPIO.h"
+#include "PCI.h"
 
 #include "TriggerSettings.h"
 #include "TriggerInterface.h"
 
 
-/** @ingroup    Trigger
-  * @defgroup   Trigger_Interface
-  * @brief      Interface for the Trigger module
-  * @details    More information on page @ref driver_trigger_interface  
+/** @ingroup    drivers_trigger
+  * @defgroup   drivers_trigger_interface  Interface
+  * @brief      Fire trigger module interface
+  * @details    More information on page @ref trigger_interface
   * @{
   */
 
@@ -30,6 +31,7 @@ void triggerIfInit(void)
     .pin    = GPIO_PIN,
   };  
   gpioInit(&GPIO_PORT, &gpio);
+  pciLineEnable(PCI_LINE);
 }
 
 

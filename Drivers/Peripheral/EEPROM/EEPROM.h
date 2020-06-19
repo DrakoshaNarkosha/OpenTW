@@ -2,13 +2,13 @@
   ******************************************************************************
   * @file    EEPROM.h
   * @brief   EEPROM (Electrically Erasable Programmable Read-Only Memory) 
-  *          driver for 8-bit AVR MCU (header)
+  *          driver for 8-bit AVR MCUs (header)
   * @version 1.0.0
   *
-  * @page driver_peripheral_eeprom  EEPROM driver  
+  * @page eeprom  EEPROM (Electrically Erasable Programmable Read-Only Memory) driver  
   *
-  * @subsection Description
-  *   Low-level EEPROM driver for 8-bit AVR MCU. This drivers is wrapper on MCU
+  * @section eeprom_description  Description
+  *   Low-level EEPROM driver for 8-bit AVR MCUs. This drivers is wrapper on MCU
   *   registers to give more convenient access to EEPROM peripheral registers.
   *   This driver implements writing data to EEPROM with byte and buffered
   *   access.
@@ -17,12 +17,12 @@
   *            careful with addressing.
   *
   *
-  * @subsection Usage
+  * @section eeprom_usage  Usage
   *   Call functions with eepromWrite prefix to write data to EEPROM and
   *   functions with eepromRead prefix to read data from EEPROM.
   *
   *
-  * @subsection Changelog
+  * @section eeprom_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -35,23 +35,23 @@
 #include <stdint.h>
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
+/** @ingroup    drivers
+  * @addtogroup drivers_peripheral  Peripheral
   * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
   * @{
   */
 
 
-/** @ingroup    Peripheral
-  * @defgroup   EEPROM
-  * @brief      EEPROM driver
-  * @details    More information on page @ref driver_peripheral_eeprom
+/** @ingroup    drivers_peripheral
+  * @defgroup   drivers_peripheral_eeprom  EEPROM
+  * @brief      EEPROM (Electrically Erasable Programmable Read-Only Memory) driver
+  * @details    More information on page @ref eeprom
   * @{
   */
 
@@ -107,17 +107,17 @@ void eepromWrite(uint16_t addr, uint8_t* data, uint16_t size);
   */
 void eepromRead(uint16_t addr, uint8_t* data, uint16_t size);
 
-/* End of EEPROM defgroup */
+/* End of drivers_peripheral_eeprom defgroup */
 /** @}
   */
 
 
-/* End of Peripheral defgroup */
+/* End of drivers_peripheral defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

@@ -12,15 +12,15 @@
 #include "ShootingMode.h"
 
 
-/** @ingroup    Drivers
-  * @addtogroup Shooting_Mode
-  * @brief      Shooting Mode handler 
-  * @details    More information on page @ref driver_shooting_mode  
+/** @ingroup    drivers_shooting_mode
+  * @addtogroup drivers_shooting_mode_driver  Driver
+  * @brief      Shooting Mode driver
+  * @details    More information on page @ref shooting_mode
   * @{
   */
 
-ShootingMode_t g_autoMode = SHOOTING_MODE_BURST;  /*!< Automatic mode (full auto or 3-burst), based on value read from EEPROM. */
-ShootingMode_t g_currMode = SHOOTING_MODE_SEMI;   /*!< Current shooting mode. */
+volatile static ShootingMode_t g_autoMode = SHOOTING_MODE_BURST;  /*!< Automatic mode (full auto or 3-burst), based on value read from EEPROM. */
+volatile static ShootingMode_t g_currMode = SHOOTING_MODE_SEMI;   /*!< Current shooting mode. */
 
 
 /* Initialize related to Shooting Mode module peripheral modules. */
@@ -67,6 +67,6 @@ void shootingModeIrqHandler(void)
   g_currMode = (shootingModeIfRead() ? SHOOTING_MODE_SEMI : g_autoMode);
 }
 
-/* End of Shooting_Mode_Driver defgroup */
+/* End of drivers_shooting_mode_driver defgroup */
 /** @}
   */

@@ -11,10 +11,10 @@
 #include "FETStandard.h"
 
 
-/** @ingroup    FET_Standard
-  * @defgroup   FET_Standard_Driver
+/** @ingroup    drivers_fet_standard
+  * @addtogroup drivers_fet_standard_driver  Driver
   * @brief      Standard FET driver
-  * @details    More information on page @ref driver_fet_standard
+  * @details    More information on page @ref fet_standard
   * @{
   */
 
@@ -50,6 +50,6 @@ void fetStandardPositiveOn(void)
   fetStandardIfSet(&FET_POSITIVE_GPIO_PORT, FET_POSITIVE_GPIO_PIN);
 }
 
-/* End of FET_Standard_Driver defgroup */
+/* End of drivers_fet_standard_driver defgroup */
 /** @}
   */

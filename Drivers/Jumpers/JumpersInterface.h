@@ -4,9 +4,9 @@
   * @brief   Interface for Jumpers module (header)
   * @version 1.0.0
   *
-  * @page driver_jumpers_interface  Jumpers driver interface
+  * @page jumpers_interface  Jumpers interface
   *
-  * @subsection Description
+  * @section jumpers_interface_description  Description
   *   Current module implements platform-related hardware functions for 
   *   operations with jumpers. This module must implement initialization and 
   *   GPIO read function for proper functioning.
@@ -17,7 +17,7 @@
   *         this reasons input signal from GPIO line must be inverted.
   *
   *
-  * @subsection Changelog
+  * @section jumpers_interface_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -28,24 +28,24 @@
 #define JUMPERS_INTERFACE_H
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Jumpers
+/** @ingroup    drivers
+  * @addtogroup driver_jumpers  Jumpers
   * @brief      Jumpers handler 
-  * @details    More information on page @ref driver_jumpers  
+  * @details    More information on page @ref jumpers
   * @{
   */
 
 
-/** @ingroup    Jumpers
-  * @defgroup   Jumpers_Interface
-  * @brief      Interface for the Jumpers module
-  * @details    More information on page @ref driver_jumpers_interface  
+/** @ingroup    driver_jumpers
+  * @defgroup   driver_jumpers_interface  Interface
+  * @brief      Jumpers module interface
+  * @details    More information on page @ref jumpers_interface
   * @{
   */
 
@@ -66,17 +66,17 @@ void jumpersIfInit(void);
   */
 bool jumpersIfRead(const void* port, uint8_t pin);
 
-/* End of Jumpers_Interface defgroup */
+/* End of driver_jumpers_interface defgroup */
 /** @}
   */
 
 
-/* End of Jumpers defgroup */
+/* End of driver_jumpers defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

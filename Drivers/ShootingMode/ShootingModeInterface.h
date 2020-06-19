@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
   * @file    ShootingModeInterface.h
-  * @brief   Interface for the Shooting Mode module (header)
+  * @brief   Interface for Shooting Mode module (header)
   * @version 1.0.0
   *
-  * @page driver_shooting_mode_interface  Shooting mode driver interface
+  * @page shooting_mode_interface  Shooting Mode interface
   *
-  * @subsection Description
+  * @section shooting_mode_interface_description  Description
   *   Current module implements platform-related hardware functions for 
   *   monitoring and changing shooting mode. This module must implement 
   *   initialization, shooting mode GPIO read and EEPROM read/write of auto
@@ -16,9 +16,11 @@
   *         selected.
   *
   *
-  * @subsection Changelog
+  * @section shooting_mode_interface_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Added PCI line interrupt enabling.  
   ******************************************************************************
   */
 
@@ -29,24 +31,24 @@
 #include "ShootingModeTypes.h"
 
 
-/** @addtogroup Drivers
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Shooting_Mode
+/** @ingroup    drivers
+  * @addtogroup driver_shooting_mode  Shooting mode
   * @brief      Shooting Mode handler 
-  * @details    More information on page @ref driver_shooting_mode  
+  * @details    More information on page @ref shooting_mode  
   * @{
   */
 
 
-/** @ingroup    Shooting_Mode
-  * @defgroup   Shooting_Mode_Interface
-  * @brief      Interface for the Shooting Mode module
-  * @details    More information on page @ref driver_shooting_mode_interface  
+/** @ingroup    drivers_shooting_mode
+  * @defgroup   drivers_shooting_mode_interface  Interface
+  * @brief      Shooting Mode module interface
+  * @details    More information on page @ref shooting_mode_interface  
   * @{
   */
 
@@ -73,23 +75,23 @@ ShootingMode_t shootingModeIfMemoryRead(void);
 
 /** Write current automatic mode to memory.
   *
-  * @param[in]     New shooting mode.
+  * @param[in]     mode  New shooting mode.
   *
   * @return Automatic mode.
   */
 void shootingModeIfMemoryWrite(ShootingMode_t mode);
 
-/* End of Shooting_Mode_Interface defgroup */
+/* End of drivers_shooting_mode_interface defgroup */
 /** @}
   */
 
 
-/* End of Shooting_Mode defgroup */
+/* End of drivers_shooting_mode defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

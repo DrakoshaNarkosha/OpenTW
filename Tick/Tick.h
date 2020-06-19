@@ -4,9 +4,9 @@
   * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (header)
   * @version 1.0.0  
   *
-  * @page driver_tick  Tick driver
+  * @page tick  Tick
   *
-  * @subsection Description
+  * @section tick_description  Description
   *   Current module gives interrupt-based API for measuring one milliseconds 
   *   ticks, based on Timer/Counter 0.
   * 
@@ -16,14 +16,14 @@
   *            overflow occurs.
   *
   *
-  * @subsection Usage
+  * @section tick_usage  Usage
   *   1. Set global interrupts flag to true.
   *   2. Call tickStart() to start Timer/Counter 0.
   *   3. Call tickGet() to get current time, starting from tickStart() call in 
   *      milliseconds.
   *
   *
-  * @subsection Changelog
+  * @section tick_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
   ******************************************************************************
@@ -34,23 +34,9 @@
 #define TICK_H
 
 
-/** @addtogroup Drivers
-  * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Drivers
-  * @addtogroup Peripheral
-  * @brief      Peripheral drivers (ADC, GPIO, EEPROM, etc.)
-  * @{
-  */
-
-
-/** @ingroup    Peripheral
-  * @defgroup   Tick
+/** @defgroup   tick  Tick
   * @brief      Tick (milliseconds) source 
-  * @details    More information on page @ref driver_tick
+  * @details    More information on page @ref tick
   * @{
   */
 
@@ -84,17 +70,7 @@ void tickReset(void);
   */
 uint16_t tickGet(void);
 
-/* End of Tick defgroup */
-/** @}
-  */
-
-
-/* End of Peripheral defgroup */
-/** @}
-  */
-
-
-/* End of Drivers defgroup */
+/* End of tick defgroup */
 /** @}
   */
 

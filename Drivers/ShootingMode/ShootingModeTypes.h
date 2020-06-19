@@ -1,17 +1,18 @@
 /**
   ******************************************************************************
   * @file    ShootingModeTypes.h
-  * @brief   Types for Shooting Mode library
+  * @brief   Types for the Shooting Mode module
   * @version 1.0.0
   *
-  * @page driver_shooting_mode_types  Types for the Shooting Mode library
+  * @page shooting_mode_types  Shooting Mode types
   *
-  * @subsection Description
-  *   Types for the Shooting Mode library.
+  * @section shooting_mode_types_description  Description
+  *   Types for the Shooting Mode module.
   *
-  * @subsection Changelog
+  *
+  * @section shooting_mode_types_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
-  *     - Initial version.  
+  *     - Initial version.
   ******************************************************************************
   */
 
@@ -19,25 +20,29 @@
 #ifndef SHOOTING_MODE_TYPES_H
 #define SHOOTING_MODE_TYPES_H
 
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
 
-/** @addtogroup Drivers
+
+/** @addtogroup drivers  Drivers
   * @brief      Drivers for MCU peripheral (ADC, GPIO, EEPROM, etc.), peripheral modules (InelliFET, etc.), custom drivers (BattryMeasure, Magazine, etc.)
   * @{
   */
 
 
-/** @ingroup    Drivers
-  * @addtogroup Shooting_Mode
+/** @ingroup    drivers
+  * @addtogroup driver_shooting_mode  Shooting mode
   * @brief      Shooting Mode handler 
-  * @details    More information on page @ref driver_shooting_mode  
+  * @details    More information on page @ref shooting_mode  
   * @{
   */
 
 
-/** @ingroup    Shooting_Mode
-  * @defgroup   Shooting_Mode_Types
-  * @brief      Shooting mode driver types
-  * @details    More information on page @ref driver_shooting_mode_types  
+/** @ingroup    driver_shooting_mode
+  * @addtogroup driver_shooting_mode_types  Types
+  * @brief      Shooting Mode module types
+  * @details    More information on page @ref shooting_mode_types
   * @{
   */
 
@@ -51,17 +56,17 @@ typedef enum
   SHOOTING_MODE_BURST     = 0x02, /*!< 3-burst mode. */
 }ShootingMode_t;
 
-/* End of Shooting_Mode_Types defgroup */
+/* End of driver_shooting_mode_types defgroup */
 /** @}
   */
 
 
-/* End of Shooting_Mode defgroup */
+/* End of driver_shooting_mode defgroup */
 /** @}
   */
 
 
-/* End of Drivers defgroup */
+/* End of drivers defgroup */
 /** @}
   */
 

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    Trigger.c
-  * @brief   Implementation of Trigger module (source)
+  * @brief   Trigger driver (source)
   * @version 1.1.0
   ******************************************************************************
   */
@@ -12,15 +12,14 @@
 #include "Trigger.h"
 
 
-/** @ingroup    Peripheral
-  * @defgroup   Trigger_Driver
-  * @brief      Trigger driver
-  * @details    More information on page @ref driver_trigger  
+/** @ingroup    drivers_trigger
+  * @addtogroup drivers_trigger_driver  Driver
+  * @brief      Fire trigger driver
+  * @details    More information on page @ref trigger  
   * @{
   */
 
-/*!< Variable to store current trigger status in. */
-volatile static bool g_triggered = false;
+volatile static bool g_triggered = false;   /*!< Variable to store current trigger status in. */
 
 
 /* Initialize related to the Trigger module peripheral modules. */
@@ -44,6 +43,6 @@ void triggerIrqHandler(void)
   g_triggered = triggerIfRead();
 }
 
-/* End of Trigger_Driver defgroup */
+/* End of drivers_trigger_driver defgroup */
 /** @}
   */
