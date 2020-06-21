@@ -57,6 +57,7 @@
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>HW_V1</Value>
+      <Value>F_CPU=1000000UL</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
@@ -78,9 +79,13 @@
       <Value>../Drivers/ShootingMode</Value>
       <Value>../Drivers/LightBarrier</Value>
       <Value>../Tick</Value>
+      <Value>../ErrorHandler</Value>
+      <Value>../Shooter</Value>
+      <Value>../Shooter/Standard</Value>
       <Value>../Application</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
@@ -115,6 +120,9 @@
     <Compile Include="Application\Addresses.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Application\Errno.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Application\main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -125,6 +133,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Application\Revision.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device\ATTiny84A\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device\ATTiny84A\delay_basic.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Device\ATTiny84A\interrupt.h">
@@ -307,6 +321,30 @@
     <Compile Include="Drivers\Trigger\TriggerSettings.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ErrorHandler\ErrorHandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ErrorHandler\ErrorHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\App\Shooter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\App\Shooter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\App\ShooterTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\Standard\ShooterStandard.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\Standard\ShooterStandard.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Shooter\Standard\ShooterStandardSettings.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Tick\Tick.c">
       <SubType>compile</SubType>
     </Compile>
@@ -322,9 +360,9 @@
     <Folder Include="Drivers\FET\" />
     <Folder Include="Drivers\FET\Standard\" />
     <Folder Include="Drivers\Jumpers" />
-    <Folder Include="Drivers\Magazine" />
     <Folder Include="Drivers\LightBarrier" />
     <Folder Include="Drivers\LED" />
+    <Folder Include="Drivers\Magazine\" />
     <Folder Include="Drivers\Trigger" />
     <Folder Include="Drivers\Peripheral\EEPROM" />
     <Folder Include="Drivers\Peripheral\Timer" />
@@ -334,6 +372,10 @@
     <Folder Include="Device" />
     <Folder Include="Drivers\Peripheral\PCI" />
     <Folder Include="Drivers\Peripheral\ADC" />
+    <Folder Include="ErrorHandler" />
+    <Folder Include="Shooter" />
+    <Folder Include="Shooter\App" />
+    <Folder Include="Shooter\Standard" />
     <Folder Include="Tick\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

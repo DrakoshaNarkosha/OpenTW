@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    LightBarrierInterface.c
   * @brief   Interface for the Light Barrier module (source)
-  * @version 1.0.0
+  * @version 1.1.0
   ******************************************************************************
   */
 
@@ -45,13 +45,13 @@ void ligthBarrierIfInit(void)
 /* Turn on the LED for the Light Barrier. */
 void ligthBarrierIfOn(void)
 {
-  gpioPinSet(&LED_GPIO_PORT, LED_GPIO_PIN);
+  gpioPinReset(&LED_GPIO_PORT, LED_GPIO_PIN);
 }
 
 /* Turn off the LED for the Light Barrier. */
 void ligthBarrierIfOff(void)
 {
-  gpioPinReset(&LED_GPIO_PORT, LED_GPIO_PIN);
+  gpioPinSet(&LED_GPIO_PORT, LED_GPIO_PIN);
 }
 
 

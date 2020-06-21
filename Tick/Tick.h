@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    Tick.h
   * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (header)
-  * @version 1.0.0  
+  * @version 1.1.0  
   *
   * @page tick  Tick
   *
@@ -26,12 +26,18 @@
   * @section tick_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Added turning off and turning on overflow interrupt inside the
+  *       @ref tickReset() function to avoid atomic break of g_time reset 
+  *       operation.
   ******************************************************************************
   */
 
 
 #ifndef TICK_H
 #define TICK_H
+
+#include <stdint.h>
 
 
 /** @defgroup   tick  Tick

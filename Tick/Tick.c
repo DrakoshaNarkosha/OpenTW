@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    Tick.c
   * @brief   Milliseconds tick implementation, based on Timer/Counter 0 (source) 
-  * @version 1.0.0  
+  * @version 1.1.0  
   ******************************************************************************
   */
 
@@ -47,7 +47,9 @@ void tickStop(void)
 /* Reset time variable. */
 void tickReset(void)
 {
+  tc0SetIt(TC0_IT_NONE);
   g_time = 0;
+  tc0SetIt(TC0_IT_OVERFLOW);
 }
 
 

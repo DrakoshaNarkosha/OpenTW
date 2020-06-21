@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    LightBarrierInterface.h
   * @brief   Interface for the Light Barrier module (header)
-  * @version 1.0.0
+  * @version 1.1.0
   *
   * @page light_barrier_interface  Light Barrier interface
   *
@@ -18,6 +18,11 @@
   * @section light_barrier_interface_changelog  Changelog
   *   - <b><em>Version 1.0.0</em></b>
   *     - Initial version.
+  *   - <b><em>Version 1.1.0</em></b>
+  *     - Changed @ref ligthBarrierIfOn() implementation. Now it reset line to 
+  *       turn on the LED.
+  *     - Changed @ref ligthBarrierIfOff() implementation. Now it set line to
+  *       turn off the LED.
   ******************************************************************************
   */
 

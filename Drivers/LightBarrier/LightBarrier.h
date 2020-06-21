@@ -120,7 +120,7 @@ void lightBarrierOff(void);
   * @retval false  Turn of sector gear is not over.
   * @retval true   Turn of sector gear is over.
   */
-bool ligthBarrierRead(void);
+bool lightBarrierRead(void);
 
 
 /** Interrupt handler for the Light Barrier module.

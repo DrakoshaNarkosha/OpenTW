@@ -44,7 +44,7 @@ void lightBarrierOff(void)
 
 
 /* Read state of the light barrier photodiode. */
-bool ligthBarrierRead(void)
+bool lightBarrierRead(void)
 {
   return g_state;
 }
